@@ -140,7 +140,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 
 	<select id="selectMaxT" resultType="String">
-		select max(cast(substring_index(t_no,'-',-1) as integer)) from a_book
+		select max(cast(substring_index(t_no,'-',-1) as decimal)) from a_book
 	</select>
 
 	<insert id="departIns" parameterType="compbean">
