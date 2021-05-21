@@ -7,27 +7,15 @@
 	<div class="row no-gutters social-container">
 		<div class="col">
 			<a class="social-inner" href="#"><span
-				class="icon mdi mdi-instagram"></span><span>김동혁</span></a>
+				class="icon mdi mdi-instagram"></span><span>이준범</span></a>
 		</div>
 		<div class="col">
 			<a class="social-inner" href="#"><span
-				class="icon mdi mdi-twitter"></span><span>안상민</span></a>
+				class="icon mdi mdi-twitter"></span><span>김도희</span></a>
 		</div>
 		<div class="col">
 			<a class="social-inner" href="#"><span
-				class="icon mdi mdi-youtube-play"></span><span>장보성</span></a>
-		</div>
-		<div class="col">
-			<a class="social-inner" href="#"><span
-				class="icon mdi mdi-youtube-play"></span><span>천지훈</span></a>
-		</div>
-		<div class="col">
-			<a class="social-inner" href="#"><span
-				class="icon mdi mdi-youtube-play"></span><span>표종은</span></a>
-		</div>
-		<div class="col">
-			<a class="social-inner" href="#"><span
-				class="icon mdi mdi-facebook"></span><span>황정용</span></a>
+				class="icon mdi mdi-youtube-play"></span><span>김영화</span></a>
 		</div>
 	</div>
 	<div class="container">
@@ -49,7 +37,7 @@
 				<h5>Contacts</h5>
 				<dl class="contact-list">
 					<dt>Address:</dt>
-					<dd>서울 특별시 강남구 테헤란로1길 10세경빌딩</dd>
+					<dd>대전광역시 서구 계룡로 636, 7층(용문동, 도산빌딩)</dd>
 				</dl>
 				<dl class="contact-list">
 					<dt>email:</dt>
