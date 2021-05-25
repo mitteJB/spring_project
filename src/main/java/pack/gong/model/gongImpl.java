@@ -38,11 +38,9 @@ public class gongImpl extends SqlSessionDaoSupport implements gongInter{
 	
 	public int maxNum() throws DataAccessException {
 		try {
-			int result = getSqlSession().selectOne("maxnum");
-			return result;
+			return getSqlSession().selectOne("maxnum");
 		} catch (NullPointerException e) {
-			int result = 0;
-			return result;
+			return 0;
 		}
 	}
 	
