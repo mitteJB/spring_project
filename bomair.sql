@@ -23,9 +23,6 @@ CREATE TABLE gong
     bdate   VARCHAR(20) DEFAULT NULL
 );
 
-insert into gong
-values (1, '공지사항', '공지사항 내용', 0, 21210525);
-
 CREATE TABLE car
 (
     r_no    INT(15)      NOT NULL PRIMARY KEY AUTO_INCREMENT,
