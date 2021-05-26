@@ -10,7 +10,6 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 
 import pack.gong.controller.gongBean;
-import pack.gong.model.gongInter;
 
 @Repository("gongImpl")
 public class gongImpl extends SqlSessionDaoSupport implements gongInter{
@@ -37,7 +36,11 @@ public class gongImpl extends SqlSessionDaoSupport implements gongInter{
 	}
 	
 	public int maxNum() throws DataAccessException {
-		return getSqlSession().selectOne("maxnum");
+		try {
+			return getSqlSession().selectOne("maxnum");
+		} catch (NullPointerException e) {
+			return 0;
+		}
 	}
 	
 	public gongDto detail(int num) throws DataAccessException {
