@@ -30,7 +30,9 @@
 		<div class="carousel-inner">
 			<div class="carousel-item active">
 <%--				<img src="resources/images/bg1.jpg" class="d-block w-100" alt="...">--%>
-				<img src="${pageContext.request.contextPath}/resources/images/bg1.jpg" class="d-block w-100" alt="...">
+				<%-- <img src="${pageContext.request.contextPath}/resources/images/bg1.jpg" class="d-block w-100" alt="..."> --%>
+				<iframe src="https://www.youtube.com/embed/pRq2jWK7rPI?autoplay=1&mute=1 " 
+				width="100%" height="670" frameborder="0" allow="autoplay"></iframe>
 			</div>
 			<div class="carousel-item">
 				<img src="resources/images/bg2.jpg" class="d-block w-100" alt="...">
