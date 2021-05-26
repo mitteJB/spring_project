@@ -18,7 +18,7 @@ $(document).ready(function(){
 	});
 	
 	$('#btnhome').click(function(){
-		location.href = "airinfo";		
+		location.href = "index.jsp";
 	});
 	
 });

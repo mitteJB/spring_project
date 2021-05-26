@@ -173,7 +173,7 @@ function airinfo() {
 
 <a href="javascript:functview('${dto.t_no }', '${dto.s_no}')"  target="f_main">티켓미리보기</a> &nbsp;&nbsp;&nbsp;&nbsp;
 
-<input type="button" value="결제 내역 프린트하기" onclick="javascrpit:pagePrintPreview()">
+<input type="button" value="결제 내역 프린트하기" onclick="javascript:pagePrintPreview()">
 <hr>
 <br>
 

@@ -16,14 +16,14 @@
 		<br>
 		
 		<div class="dispArea basicFont">
-			<!-- 
+
 			<br><br><br>
 			결과: <c:out value="${cList}"/>${cList}
 			<br>
 			<p>체크인 확정 내역(출발날짜, 항공편명, 좌석, 탑승자명 등) 표출</p>
 			<br><br><br>
 			<a href="index.jsp" class="font_NotoSerif">> Go to BomAir Main</a>	
-			<!-- <a href="createTable" class="font_NotoSerif">> Go to CreateTable</a>	 -->
+			<a href="createTable" class="font_NotoSerif">> Go to CreateTable</a>
 			
 			<table>
 				<tr>

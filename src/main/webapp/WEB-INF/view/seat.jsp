@@ -263,7 +263,7 @@ function confirmCheck(){
 	</form>
 
 	<br><br>	
-	<!-- <a href="showCheckinInfo">Go to 체크인 내역 확인 페이지 (확인용, 철거예정)</a> -->
+	<a href="showCheckinInfo">Go to 체크인 내역 확인 페이지 (확인용, 철거예정)</a>
 	
 </div>	
 </body>
