@@ -10,7 +10,6 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 
 import pack.gong.controller.gongBean;
-import pack.gong.model.gongInter;
 
 @Repository("gongImpl")
 public class gongImpl extends SqlSessionDaoSupport implements gongInter{
