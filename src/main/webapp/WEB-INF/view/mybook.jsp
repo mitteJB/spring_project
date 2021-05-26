@@ -44,7 +44,6 @@ function funcdetail(t_no) {
 	   var o_sdate = t_no.substring(1,5) + "-" + t_no.substring(5,7) + "-" + t_no.substring(7,9);
 	   // alert(o_sdate);
 	   $('input[name=o_sdate]').attr('value', o_sdate);
-	   
 	   $('#detail').submit();
 }
 
@@ -151,7 +150,6 @@ function funcdetail(t_no) {
 			<input type="hidden" id="a_seat" name="a_seat" value="">
 			<input type="hidden" id="g_id" name="g_id" value="<%=g_id %>">
 		</form>
-		
 		   <form action="detail" method="post" id="detail">
 			   <input type="hidden" name="t_no">
 			   <input type="hidden" name="o_sdate">

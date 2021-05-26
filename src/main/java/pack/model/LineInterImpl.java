@@ -246,7 +246,7 @@ public class LineInterImpl extends SqlSessionDaoSupport implements LineInter{
 
 	
 	public HashMap<String, Object> detailName(String g_id) {
-		return getSqlSession().selectOne("detaiName", g_id);
+		return getSqlSession().selectOne("detailName", g_id);
 	}
 	
 	//sales-----------------------------------------

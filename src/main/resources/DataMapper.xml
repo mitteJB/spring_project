@@ -209,7 +209,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 
 	<!-- Create SeatTable -->
-	<insert id="seat_createTalble" parameterType="java.util.Map">
+	<insert id="seat_createTable" parameterType="java.util.Map">
 		${sql}
 	</insert>
 

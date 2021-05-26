@@ -13,6 +13,6 @@ public interface SeatInter {
 	
 	public List<CheckinDto> checkin_selectCheckinData(Map<String, Object> map2);
 	
-	public int seat_createTalble();
+	public int seat_createTable();
 	
 }
