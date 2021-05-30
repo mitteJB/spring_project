@@ -8,6 +8,7 @@
 <!-- Bootstrap -->
 <%@include file="/bootstrap.jsp"%>
 <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+<!-- <link rel="stylesheet" href="resources/css/tht.css"> -->
 <title>BOM AIR :: Best Of Most Airline & Rent Car</title>
 </head>
 <body>
@@ -25,21 +26,24 @@
 			<li data-target="#carouselExampleIndicators" data-slide-to="0"
 				class="active"></li>
 			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li><!--  -->
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-<%--				<img src="resources/images/bg1.jpg" class="d-block w-100" alt="...">--%>
+				<!-- <img src="resources/images/bg1.jpg" class="d-block w-100" alt="..."> -->
 				<%-- <img src="${pageContext.request.contextPath}/resources/images/bg1.jpg" class="d-block w-100" alt="..."> --%>
-				<iframe src="https://www.youtube.com/embed/pRq2jWK7rPI?autoplay=1&mute=1 " 
-				width="100%" height="670" frameborder="0" allow="autoplay"></iframe>
+				<!-- <iframe src="https://www.youtube.com/embed/pRq2jWK7rPI?autoplay=1&mute=1 " 
+				width="100%" height="670" frameborder="0" allow="autoplay"></iframe> -->
+				
+				<img alt="..." src="resources/images/beach.gif" class="d-block w-100"> <!-- 배경 이미지 gif 배경 -->
+				
 			</div>
-			<div class="carousel-item">
+			<!-- <div class="carousel-item">
 				<img src="resources/images/bg2.jpg" class="d-block w-100" alt="...">
 			</div>
 			<div class="carousel-item">
 				<img src="resources/images/bg3.jpg" class="d-block w-100" alt="...">
-			</div>
+			</div> -->
 		</div>
 		<div class="modal" id="myModal" tabindex="-1" role="dialog">
 			<div class="modal-dialog modal-sm">
@@ -110,46 +114,53 @@
 			</ul>
 		</div>
 	</div>
+	
+	<div class="inner">
+		<div class="textMotionD on">
+			<div class="motionTit textD">
+				<p>즐거운 여행을 위한<br/><span>댜양한 프로모션</span>을 확인하세요
+			</div>
+		</div>
+	
+	</div>
+	
+	
 	<!-- 빠른예약 창 -->
 	<div class="imsi-container">
 		<div class="row text-center">
 			<div class="col-xl-12">
+			
 				<div class="pricing-table">
+				
+				
+				
 					<div class="panel panel-primary" style="border: none;">
-						<div class="controle-header panel-heading panel-heading-landing">
-							<h1 class="panel-title panel-title-landing">
-								<img class="brand-logo-light" src="resources/images/bomair_logo.png" 
-									style="width:50%;">
-							</h1>
-						</div>
-						<div
-							class="controle-panel-heading panel-heading panel-heading-landing-box">
-							Best Of Most Airline & Rent Car</div>
-						<div class="panel-body panel-body-landing">
+						
+						
 							<!-- 빠른예약 창(항공권)-->
-							<table class="table" id="reservation-table" style="width: 380px;">
+							<table class="table" id="reservation-table" style="/* width: 380px; */">
 								<tr>
-									<td style="width: 50%"><input type="button" value="항공권"
-										name="reservation" style="width: 100%"></td>
-									<td style="width: 50%"><input type="button" value="렌트카"
-										name="rent" style="width: 100%"></td>
-								</tr>
-								<tr>
-									<td colspan="2" style="text-align: center;" class="flightWay">
+									<!-- <td style="width: 50%"><input type="button" value="항공권"
+										name="reservation" style="width: 100%"></td> -->
+									
+										
+								
+									<td colspan="2" style="text-align: center; width: 15%" class="flightWay">
 									<input type="radio" name="flightWay" value="round" checked="checked"/>왕복
 									<input type="radio" name="flightWay" value="one_way" />편도
-									<td>
-								</tr>
-								<tr>
-									<td colspan="2" style="text-align: center;"><select
+									
+								
+									<td colspan="2" style="text-align: center; width: 10%"><select
 										id="Depart" style="width: 100%">
 											<option>출발지 선택</option>
 											<option value="inc" style="width: 100%">인천(INC)</option>
 									</select></td>
-								</tr>
-								<tr>
-									<td colspan="2" style="text-align: center;"><select
-										id="Arrive" style="width: 100%">
+									
+									
+									
+								
+									<td colspan="2" style="text-align: center; width: 10%"><select
+										id="Arrive" style="width: 100%" >
 											<option>도착지 선택</option>
 											<optgroup label="국내">
 												<option value="CJU" style="width: 100%">제주(CJU)</option>
@@ -169,67 +180,33 @@
 												<option value="JFK" style="width: 100%">뉴욕(JFK)</option>
 											</optgroup>
 									</select></td>
-								</tr>
-								<tr id="ReservationDateTr">
+									
+									
+								
+								<!-- <tr id="ReservationDateTr" style="width: 50%"> -->
+								
 									<td id="goDate" style="width: 50%"><input type="text"
 										class="testDatepicker" id="GoDateChoose" style="width: 100%"
 										placeholder="출발 날짜 선택"></td>
 									<td id="backDate" style="width: 50%"><input type="text"
 										class="testDatepicker" id="BackDateChoose" style="width: 100%"
 										placeholder="복귀 날짜 선택"></td>
-								</tr>
-								<tr>
+								
 									<td colspan="2"><input type="text" id="people"
-										name="people" placeholder="인원수" style="width: 100%"
+										name="people" placeholder="인원수" style="/* width: 30% */"
 										data-toggle="modal" data-target="#myModal" readonly="readonly"></td>
+									<td id ="searchHang">
+										<a href="#" class=""
+								id="reservationsubmit"> <img src="resources/images/tripPlanArea_icon.jpg"></a></td>	
 								</tr>
 							</table>
 
 
 
 
-							<table class="table" id="rent-table"
-								style="width: 380px; display: none;">
-								<tr>
-									<td style="width: 50%"><input type="button" value="항공권"
-										name="reservation" style="width: 100%"></td>
-									<td style="width: 50%"><input type="button" value="렌트카"
-										name="rent" style="width: 100%"></td>
-								</tr>
-								<tr id="RentPlaceTr">
-									<td colspan="2" style="text-align: center;"><select
-										id="RentPlaceTd" style="width: 100%">
-											<option id="RentPlace_Sel_Opt">렌트 장소 선택</option>
-											<optgroup label="국내">
-												<option value="CJU" style="width: 100%">CJU(제주)</option>
-											</optgroup>
-											<optgroup label="일본">
-												<option value="NPT" style="width: 100%">NPT(도쿄)</option>
-												<option value="KIX" style="width: 100%">KIX(오사카)</option>
-												<option value="FUK" style="width: 100%">FUK(후쿠오카)</option>
-											</optgroup>
-											<optgroup label="동남아">
-												<option value="HKG" style="width: 100%">HKG(홍콩)</option>
-												<option value="BKK" style="width: 100%">BKK(방콕)</option>
-												<option value="BKI" style="width: 100%">BKI(코타키나발루)</option>
-											</optgroup>
-											<optgroup label="그외 지역">
-												<option value="WO" style="width: 100%">WO(블라디보스토크)</option>
-												<option value="JFK" style="width: 100%">JFK(뉴욕)</option>
-											</optgroup>
-									</select></td>
-								</tr>
-								<tr id="RentDateTr">
-									<td id="goDate" style="width: 50%"><input type="text"
-										class="testDatepicker" id="RentDateChoose" style="width: 100%"
-										placeholder="렌트 날짜 선택"></td>
-									<td id="backDate" style="width: 50%"><input type="text"
-										class="testDatepicker" id="ReturnDateChoose"
-										style="width: 100%" placeholder="반납 날짜 선택"></td>
-								</tr>
-							</table>
+							
 						</div>
-						<div class="panel-footer panel-footer-landing" id="searchHang">
+						<!-- <div class="panel-footer panel-footer-landing" id="searchHang">
 							<a href="#" class="btn btn-price btn-success btn-lg"
 								id="reservationsubmit" >일정으로 조회</a>
 						</div>
@@ -237,13 +214,22 @@
 						<div class="panel-footer panel-footer-landing" id="searchRent"
 							style="display: none;">
 							<a href="#" class="btn btn-price btn-success btn-lg" id="rentsubmit">일정으로 조회</a>
-						</div>
+						</div> -->
+						</tr>
 					</div>
 				</div>
 			</div>
 		</div>
+		
+		
+		
 
-	</div>
+	
+	
+	
+	
+		
+	
 
 
 	<ul class="sci" style="opacity: 0.5">
