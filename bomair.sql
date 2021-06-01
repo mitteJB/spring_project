@@ -8,9 +8,9 @@ CREATE TABLE guest_r
     g_pwd   VARCHAR(20) DEFAULT NULL,
     g_name  VARCHAR(20) DEFAULT NULL,
     g_birth VARCHAR(20) DEFAULT NULL,
-    g_addr  VARCHAR(20) DEFAULT NULL,
+    g_addr  VARCHAR(60) DEFAULT NULL,
     g_tel   varchar(20) DEFAULT NULL,
-    g_mail  VARCHAR(20) DEFAULT NULL,
+    g_mail  VARCHAR(60) DEFAULT NULL,
     PRIMARY KEY (g_id)
 );
 
