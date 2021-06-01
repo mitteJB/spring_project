@@ -8,6 +8,11 @@
 <!-- Bootstrap -->
 <%@include file="/bootstrap.jsp"%>
 <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+<link rel="stylesheet" type="text/css" href = "resources/css/main.170f3c02.css">
+
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+ -->
 <!-- <link rel="stylesheet" href="resources/css/tht.css"> -->
 <title>BOM AIR :: Best Of Most Airline & Rent Car</title>
 </head>
@@ -22,20 +27,20 @@
 
 	<div id="carouselExampleIndicators" class="carousel slide"
 		data-ride="carousel">
-		<ol class="carousel-indicators">
+		<!-- <ol class="carousel-indicators">
 			<li data-target="#carouselExampleIndicators" data-slide-to="0"
 				class="active"></li>
 			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li><!--  -->
-		</ol>
+			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		</ol> -->
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<!-- <img src="resources/images/bg1.jpg" class="d-block w-100" alt="..."> -->
+				<img src="resources/images/bg1.jpg" class="d-block w-100" alt="...">
 				<%-- <img src="${pageContext.request.contextPath}/resources/images/bg1.jpg" class="d-block w-100" alt="..."> --%>
 				<!-- <iframe src="https://www.youtube.com/embed/pRq2jWK7rPI?autoplay=1&mute=1 " 
 				width="100%" height="670" frameborder="0" allow="autoplay"></iframe> -->
 				
-				<img alt="..." src="resources/images/beach.gif" class="d-block w-100"> <!-- 배경 이미지 gif 배경 -->
+				<!-- <img alt="..." src="resources/images/beach.gif" class="d-block w-100"> --> <!-- 배경 이미지 gif 배경 -->
 				
 			</div>
 			<!-- <div class="carousel-item">
@@ -125,6 +130,17 @@
 	</div>
 	
 	
+<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+  <label class="btn btn-outline-primary" for="btnradio1">왕복</label>
+
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio2">편도</label>
+
+  
+</div>
+	
+	
 	<!-- 빠른예약 창 -->
 	<div class="imsi-container">
 		<div class="row text-center">
@@ -138,29 +154,41 @@
 						
 						
 							<!-- 빠른예약 창(항공권)-->
-							<table class="table" id="reservation-table" style="/* width: 380px; */">
+							<table class="table" id="reservation-table" style="width: 1280px; ">
+								
 								<tr>
 									<!-- <td style="width: 50%"><input type="button" value="항공권"
 										name="reservation" style="width: 100%"></td> -->
 									
 										
-								
-									<td colspan="2" style="text-align: center; width: 15%" class="flightWay">
+									<td style="width: 50%; text-align: left;" >
+									
 									<input type="radio" name="flightWay" value="round" checked="checked"/>왕복
-									<input type="radio" name="flightWay" value="one_way" />편도
+									<input type="radio" name="flightWay" value="one_way" />편도</td>
+									
+									
+									
+									
 									
 								
-									<td colspan="2" style="text-align: center; width: 10%"><select
-										id="Depart" style="width: 100%">
+								</tr>
+								<tr>
+							
+									<td style="width: 50%; text-align: left;" >
+									
+									<select
+										id="Depart" style="width: 100%; margin: 5px;" >
 											<option>출발지 선택</option>
 											<option value="inc" style="width: 100%">인천(INC)</option>
+											
 									</select></td>
 									
 									
 									
 								
-									<td colspan="2" style="text-align: center; width: 10%"><select
-										id="Arrive" style="width: 100%" >
+									<td style="width: 50%; text-align: left;" >
+									<select
+										id="Arrive" style="width: 100%; margin: 5px;" >
 											<option>도착지 선택</option>
 											<optgroup label="국내">
 												<option value="CJU" style="width: 100%">제주(CJU)</option>
@@ -181,36 +209,50 @@
 											</optgroup>
 									</select></td>
 									
+									<td colspan="2"><input type="text" id="people"
+										name="people" placeholder="인원수" style="/* width: 30% */ margin: 5px;"
+										data-toggle="modal" data-target="#myModal" readonly="readonly"></td>
+									</td>
 									
+									</tr>
+								<tr>	
 								
 								<!-- <tr id="ReservationDateTr" style="width: 50%"> -->
 								
 									<td id="goDate" style="width: 50%"><input type="text"
-										class="testDatepicker" id="GoDateChoose" style="width: 100%"
+										class="testDatepicker" id="GoDateChoose" style="width: 100%; margin: 5px;"
 										placeholder="출발 날짜 선택"></td>
 									<td id="backDate" style="width: 50%"><input type="text"
-										class="testDatepicker" id="BackDateChoose" style="width: 100%"
+										class="testDatepicker" id="BackDateChoose" style="width: 100%; margin: 5px;"
 										placeholder="복귀 날짜 선택"></td>
-								
-									<td colspan="2"><input type="text" id="people"
+									<td id ="searchHang">
+										<a href="#" class="btn btn-primary btn-sm" style="align:right; font-size: 1.5rem;  padding: .375rem 1.5rem; margin:5px;  /* margin-right: -10rem; */ width: -webkit-fill-available;" 
+								id="reservationsubmit">항공권 검색<!-- <img src="resources/images/tripPlanArea_icon.jpg"> --></a></td>
+									<!-- <td colspan="2"><input type="text" id="people"
 										name="people" placeholder="인원수" style="/* width: 30% */"
 										data-toggle="modal" data-target="#myModal" readonly="readonly"></td>
-									<td id ="searchHang">
-										<a href="#" class=""
-								id="reservationsubmit"> <img src="resources/images/tripPlanArea_icon.jpg"></a></td>	
+									</td> -->
+										
 								</tr>
+								
+								
+								
 							</table>
+							<!-- <td id ="searchHang">
+										<a href="#" class="btn btn-primary" style="align:right; font-size: 2.3rem;  padding: .375rem 1.5rem; margin-bottom: .75rem;  margin-right: -112rem;" 
+								id="reservationsubmit">항공권 검색<img src="resources/images/tripPlanArea_icon.jpg"></a></td> -->
 
 
 
 
 							
 						</div>
+						
+						
 						<!-- <div class="panel-footer panel-footer-landing" id="searchHang">
 							<a href="#" class="btn btn-price btn-success btn-lg"
 								id="reservationsubmit" >일정으로 조회</a>
 						</div>
-
 						<div class="panel-footer panel-footer-landing" id="searchRent"
 							style="display: none;">
 							<a href="#" class="btn btn-price btn-success btn-lg" id="rentsubmit">일정으로 조회</a>
