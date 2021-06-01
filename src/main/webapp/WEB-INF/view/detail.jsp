@@ -25,17 +25,17 @@
             }
         }
 
-		function funcdetail(t_no) {
-			$('input[name=t_no]').attr('value', t_no);
-			var o_sdate = t_no.substring(1, 5) + "-" + t_no.substring(5, 7) + "-" + t_no.substring(7, 9);
-			// alert(o_sdate);
-			$('input[name=o_sdate]').attr('value', o_sdate);
-			$('#detail').submit();
-		}
+        function funcdetail(t_no) {
+            $('input[name=t_no]').attr('value', t_no);
+            var o_sdate = t_no.substring(1, 5) + "-" + t_no.substring(5, 7) + "-" + t_no.substring(7, 9);
+            // alert(o_sdate);
+            $('input[name=o_sdate]').attr('value', o_sdate);
+            $('#detail').submit();
+        }
 
-		function pagePrintPreview() {
+        function pagePrintPreview() {
             var browser = navigator.userAgent.toLowerCase();
-                window.print();
+            window.print();
         }
 
         function airinfo() {
@@ -46,15 +46,11 @@
 
 </head>
 <body class="basicFont container">
-<%--<div class="logo"><a href="index.jsp"><img src="resources/images/bomair_logo.png" alt=""/></a></div>--%>
-<%--<div class="logo"><a href="index.jsp"><img src="resources/images/judyair_logo.png" alt=""/></a></div>--%>
-<div class="logo"><a href="index.jsp"><img src="resources/images/bg1.png" alt=""/></a></div>
-<h1>예약번호 : ${dto.t_no }</h1>
+<div class="logo"><a href="index.jsp"><img src="resources/images/judyair_logo.png" alt=""/></a></div>
 <br>
-<input type="button" class="btn btn-primary nextBtn btn-lg btn2 btn2-lg" value="나의예매" onclick="history.back(-1)">&nbsp;
-
 <hr class="hrCss">
 <br>
+<h4>예약번호 : ${dto.t_no }</h4>
 <table>
     <tr>
         <th align="center" colspan="2">상세 예약정보</th>
@@ -161,15 +157,21 @@
             </c:otherwise>
         </c:choose>
     </tr>
+    <tr>
+        <td>
+            <input type="button" value="티켓미리보기" onclick="functview('${dto.t_no}', '${dto.s_no}')">
+        </td>
+        <td>
+            <input type="button" value="결제 내역 프린트하기" onclick="pagePrintPreview()">
+        </td>
+    </tr>
 </table>
 <br><br>
-
-<input type="button" value="티켓미리보기" onclick="functview('${dto.t_no}', '${dto.s_no}')">
-<input type="button" value="결제 내역 프린트하기" onclick="pagePrintPreview()">
+<input type="button" class="btn btn-primary nextBtn btn-lg btn2 btn2-lg" value="돌아가기" onclick="history.back(-1)">&nbsp;
 <br>
 <br>
 <br>
-<form action="tview" method="post" id="tview" >
+<form action="tview" method="post" id="tview">
     <input type="hidden" name="t_no">
     <input type="hidden" name="o_sdate">
 </form>
