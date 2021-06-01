@@ -15,7 +15,7 @@
     <script src="https://code.jquery.com/jquery-3.4.0.js"
             integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous" ></script>
     <!-- 직접 정의한 CSS -->
-    <link rel="stylesheet" href="resources/css/mybook.css">
+    <link rel="stylesheet" href="resources/css/mybook.css?after">
     <script type="text/javascript">
 
         function goCheckIn(t_no, air_name) {
@@ -39,8 +39,8 @@
 <body>
 
 <div class="container">
-    <div class="logo"><a href="index.jsp"><img src="resources/images/bomair_logo.png"/></a></div>
-    <h1>나의 항공예약 정보조회</h1>
+    <div class="logo"><a href="index.jsp"><img src="resources/images/judyair_logo.png"/></a></div>
+    <h1>항공 예약 정보 조회</h1>
     <h4><%=g_id %>님의 항공예약 내역입니다.</h4>
     <hr class="hrCss">
     <br>
@@ -50,7 +50,7 @@
         <c:set var="mybook" value="${mybook }"/>
         <!-- 예약내역이 있을 떄 -->
         <c:if test="${fn:length(mybook) ne 0}">
-            <table>
+            <table class="table" border="1px">
                 <tr>
                     <th>예매번호</th>
                     <th>출발날짜</th>

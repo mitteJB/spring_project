@@ -45,6 +45,18 @@
 						<a class="dropdown-item" href="#">운임 안내</a> <a
 							class="dropdown-item" href="#">기내 서비스</a>
 					</div></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" id="dropdown04"
+					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">렌터카/여행자
+						보험</a>
+					<div class="dropdown-menu" aria-labelledby="dropdown04">
+						<a class="dropdown-item" href="gomycarpage?id=${id}">렌트카</a>
+						<c:if test="${id eq 'admin' }">
+									<a class="dropdown-item" href="admincar">렌트카 모든 예약 확인</a>
+								</c:if>
+						<a class="dropdown-item"
+							href="#">여행자 보험 </a>
+					</div></li>
 
 				<c:if test="${id ne null }">
 					<li class="nav-item"><a class="nav-link" href="#"

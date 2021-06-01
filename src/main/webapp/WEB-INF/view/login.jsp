@@ -14,7 +14,7 @@
 
     <%@include file="/bootstrap.jsp" %>
     <%@include file="/bootstrap_login.jsp" %>
-    <link rel="stylesheet" href="resources/css/login.css">
+    <link rel="stylesheet" href="resources/css/login.css?after">
     <script src="resources/js/login.js"></script>
 
     <title>Bom Air : Login Page</title>
@@ -23,16 +23,20 @@
 <body class="basicFont">
 
 <div class="container">
-    <div class="logo"><a href="index.jsp"><img src="resources/images/bomair_logo.png"/></a></div>
-    <div class="imgLogin col-md-4"><img id="imgLogin" src="resources/images/imgLogin.PNG"/></div>
-    <div class="loginField col-md-4">
-        <h4 style="font-size: 25px;">Bom Air에 오신 것을 환영합니다!</h4>
+    <div class="logo"><a href="index.jsp"><img src="resources/images/judyair_logo.png"/></a></div>
+<%--    <div class="imgLogin col-md-4"><img id="imgLogin" src="resources/images/imgLogin.PNG"/></div>--%>
+    <div class="loginField col-md-pull-10">
+<%--        <h4 style="font-size: 25px;">Bom Air에 오신 것을 환영합니다!</h4>--%>
 
         <form class="form-signin" action="login" method="post">
-
+            <br>
+            <a class="textid">아이디</a>
+            <br>
             <label for="inputId" class="sr-only">User Id</label>
             <input type="text" id="inputId" name="g_id" class="form-control" placeholder="User Id" required autofocus>
-
+            <br>
+            <a class="textpwd">비밀번호</a>
+            <br>
             <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" id="inputPassword" name="g_pwd" class="form-control" placeholder="Password" required>
 

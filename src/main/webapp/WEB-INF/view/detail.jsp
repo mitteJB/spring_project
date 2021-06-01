@@ -8,9 +8,9 @@
 <head>
     <meta charset="UTF-8">
     <title>bomair 예매내역 상세보기</title>
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css?after">
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js"></script>
-    <link rel="stylesheet" href="resources/css/detail.css">
+    <link rel="stylesheet" href="resources/css/detail.css?after">
     <script type="text/javascript">
         function functview(t_no, s_no) {
 
@@ -46,7 +46,9 @@
 
 </head>
 <body class="basicFont container">
-<div class="logo"><a href="index.jsp"><img src="resources/images/bomair_logo.png"/></a></div>
+<%--<div class="logo"><a href="index.jsp"><img src="resources/images/bomair_logo.png" alt=""/></a></div>--%>
+<%--<div class="logo"><a href="index.jsp"><img src="resources/images/judyair_logo.png" alt=""/></a></div>--%>
+<div class="logo"><a href="index.jsp"><img src="resources/images/bg1.png" alt=""/></a></div>
 <h1>예약번호 : ${dto.t_no }</h1>
 <br>
 <input type="button" class="btn btn-primary nextBtn btn-lg btn2 btn2-lg" value="나의예매" onclick="history.back(-1)">&nbsp;
