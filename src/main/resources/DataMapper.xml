@@ -223,60 +223,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		${value}
 	</delete>
 
-	<!--Rent -->
-	<select id="rentAllData" parameterType="hashmap"
-		resultType="rent_dto">
-		select * from (select * from car where c_place = #{RentPlaceTd}) b where
-		r_no not in (select r_no from car_book where (c_daeil between
-		#{RentDateChoose} and #{ReturnDateChoose}) or (c_banil between
-		#{RentDateChoose} and #{ReturnDateChoose}))
-	</select>
-
-	<insert id="submitRent" parameterType="hashmap">
-		insert into car_book
-		values(#{r_no}, #{c_daeil},#{c_banil},#{g_id})
-	</insert>
-
-	<select id="myCarPage" parameterType="String"
-		resultType="rent_dto">
-		select c_image, c_name, c_jong, c_bun, c_color, c_price,
-		c_daeil, c_banil,
-		c_place from car a inner join car_book b on a.r_no =
-		b.r_no where g_id
-		= #{g_id}
-	</select>
-
-	<select id="admincarPage" resultType="rent_dto">
-		select a.r_no, c_image,
-		c_name, c_jong, c_bun, c_color, c_price, c_daeil,
-		c_banil, c_place,
-		g_id from car_book a inner join car b on a.r_no =
-		b.r_no;
-	</select>
-
-	<delete id="deleteRent" parameterType="hashmap">
-		delete from car_book where
-		r_no=#{r_no} and c_daeil=#{c_daeil} and
-		c_banil=#{c_banil} and
-		g_id=#{g_id}
-	</delete>
-	
-	<insert id="insertCar" parameterType="hashmap">
-		insert into car(c_name, c_jong, c_bun, c_color,c_price,c_image,c_place) values(#{c_name},#{c_jong}, #{c_bun}, #{c_color}, #{c_price}, #{c_image}, #{c_place})
-	</insert>
-	
-	<select id="carAll" resultType="rent_dto">
-		select * from car
-	</select>
-	
-	<delete id="deleteCar" parameterType="String">
-		delete from car where r_no = #{r_no}
-	</delete>
-	
-	<delete id="deleteCarRent" parameterType="String">
-		delete from car_book where r_no=#{r_no}
-	</delete>
-
 	<!-- 매출 -->
 	<select id="salesDataAll" resultType="bookdto">
 		select * from a_book order by ab_date

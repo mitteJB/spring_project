@@ -22,7 +22,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
  	<typeAlias type="pack.mainpage.model.CheckinUpdateDto" alias="c_updto" />
  	
  	<typeAlias type="pack.mainpage.model.SeatDto" alias="sdto" />	
-	<typeAlias type="pack.rent.model.RentDto" alias="rent_dto" />
 	</typeAliases>
 
 	<mappers>
