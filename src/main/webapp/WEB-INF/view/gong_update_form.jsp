@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -44,6 +45,10 @@
 </script>
 </head>
 <body>
+<header>
+	<%@ include file="../../header.jsp"%>
+	</header>
+	<section style="margin-top: 150px" >
 	<div class="container">
 		<table class="table table-bordered">
 			<thead>
@@ -51,6 +56,10 @@
 			</thead>
 			<tbody>
 				<form action="gong_update" method="POST" id="frm">
+					<tr>
+						<th>작성자:</th>
+						<td><input type="text" name="writer" class="form-control" id="writer" value="${dto.writer}" readonly="readonly"/></td>
+					</tr>
 					<tr>
 						<th>제목:</th>
 						<td><input type="text" placeholder="제목을 입력하세요. " name="subject" class="form-control" id='subject' value='${dto.title}'/></td>
@@ -66,7 +75,7 @@
 					</tr>
 					<tr>
 							<td colspan="5"><input type="button" value="수정" class="pull-right" id="confirm"/> 
-							<input type="button" value="초기하" class="pull-left" id="reset" /> 
+							<input type="button" value="초기화" class="pull-left" id="reset" /> 
 							<input type="button" value="글 목록으로... " class="pull-right" onclick="javascript:location.href='gong_list?spage=${spage}&sword=${sword}'"/></td>
 					</tr>
 					
@@ -74,5 +83,7 @@
 			</tbody>
 		</table>
 	</div>
+	</section>
+	<%@ include file="/bottom.jsp"%>
 </body>
 </html>

@@ -9,7 +9,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias type="pack.guest.controller.GuestBean" alias="gformbean" />
 		<typeAlias type="pack.guest.model.GuestDto" alias="gdto" />
 		<typeAlias type="pack.gong.model.gongDto" alias="gong_dto" />
-		<typeAlias type="pack.gong.controller.gongBean" alias="gong_bean" />
+		<!-- <typeAlias type="pack.gong.controller.gongBean" alias="gong_bean" /> -->
 		 	<typeAlias type="pack.model.LineDto" alias="dto"/>
  	<typeAlias type="pack.model.BookDto" alias="bookdto"/>
  	<typeAlias type="pack.controller.LineBean" alias="formbean"/>

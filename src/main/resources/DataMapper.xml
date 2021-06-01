@@ -49,7 +49,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from gong
 		<choose>
 			<when test="sword.equals('All')">
-
 			</when>
 			<otherwise>
 				where title like concat('%',#{sword},'%')
@@ -79,7 +78,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<insert id="gong_register" parameterType="gong_dto">
 		insert into gong
-		values(#{num},#{title},#{con},0,#{bdate})
+		values(#{num},#{title},#{con},0,#{writer},#{bdate})
 	</insert>
 
 	<select id="maxnum" resultType="int">
@@ -103,7 +102,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<update id="gong_update_form" parameterType="gong_dto">
 		update gong set
-		title=#{title},con=#{con},bdate=#{bdate} where num=#{num}
+		title=#{title},con=#{con},bdate=#{bdate},writer=#{writer} where num=#{num}
 	</update>
 
 	<select id="Mail_Address" parameterType="String"

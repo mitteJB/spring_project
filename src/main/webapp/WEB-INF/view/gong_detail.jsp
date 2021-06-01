@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -30,16 +31,20 @@
 <%@include file="/bootstrap.jsp"%>
 <link rel="stylesheet" type="text/css" href="resources/css/style.css">
 <body>
-<header>
+	<header>
 		<%@ include file="../../header.jsp"%>
 	</header>
-	<section style="margin-top: 100px">
+	<section style="margin-top: 150px" >
 	<div class="container">
 		<table class="table table-bordered">
 			<thead>
 			</thead>
 			<tbody>
-				<form action="gong_regist" method="get" id="frm">
+				<form action="gong_register" method="get" id="frm">
+					<tr>
+						<th>작성자:</th>
+						<td><input type="text" name="writer" class="form-control" id="writer" value="${dto.writer}" readonly="readonly"/></td>
+					</tr>
 					<tr>
 						<th>제목:</th>
 						<td><input type="text" placeholder="제목을 입력하세요. " name="subject" class="form-control" id='subject' value='${dto.title}' readonly="readonly"/></td>
