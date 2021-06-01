@@ -269,12 +269,6 @@
 						<input type="hidden" name="o_sdate_R">
 						<input type="hidden" name="people">	
 			</form>
-			
-	<form action="rent" id="frm" method="post">
-		<input type="hidden" name="aa" id="aa">
-		<input type="hidden" name="bb" id="bb">
-		<input type="hidden" name="cc" id="cc">
-	</form>
-	
+
 </body>
 </html>

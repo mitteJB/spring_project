@@ -1,65 +1,37 @@
 <!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8" %>
 
 <footer class="section footer-classic context-dark bg-image"
-	style="background: #2d3246;">
-	<div class="row no-gutters social-container">
-		<div class="col">
-			<a class="social-inner" href="#"><span
-				class="icon mdi mdi-instagram"></span><span>이준범</span></a>
-		</div>
-		<div class="col">
-			<a class="social-inner" href="#"><span
-				class="icon mdi mdi-twitter"></span><span>김도희</span></a>
-		</div>
-		<div class="col">
-			<a class="social-inner" href="#"><span
-				class="icon mdi mdi-youtube-play"></span><span>김영화</span></a>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row row-30">
-			<div class="col-md-4 col-xl-5">
-				<div class="pr-xl-4">
-					<a class="brand" href="index"><img
-						class="brand-logo-light"
-						src="resources/images/bomair_logo.png" style="width:75%; padding-top: 25px; padding-bottom: 25px;"></a>
-					<p>아시아를 넘어 세계 최고를 향하는 국민항공사 BOMAIR가 항공여행 대중화를 창조하겠습니다.</p>
-					<!-- Rights-->
-					<p class="rights">
-						<span>©  </span><span class="copyright-year">2019</span><span> </span><span>BOMAIR</span><span>. </span><span>Best
-							Choice.</span>
-					</p>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<h5>Contacts</h5>
-				<dl class="contact-list">
-					<dt>Address:</dt>
-					<dd>대전광역시 서구 계룡로 636, 7층(용문동, 도산빌딩)</dd>
-				</dl>
-				<dl class="contact-list">
-					<dt>email:</dt>
-					<dd>
-					<dd>hwangjeongyong4@gmail.com</dd>
-					</dd>
-				</dl>
-				<dl class="contact-list">
-					<dt>phones:</dt>
-					<dd>+81025383644</dd>
-				</dl>
-			</div>
-			<div class="col-md-4 col-xl-3">
-				<h5>Links</h5>
-				<ul class="nav-list">
-					<li><a href="#">프로잭트 개요</a></li>
-					<li><a href="#">업무 분담</a></li>
-					<li><a href="#">다이어 그램</a></li>
-					<li><a href="#">사용 기술</a></li>
-					<li><a href="#">개선 방안</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+        style="background: #d2e7f9c2;">
+
+    <div class="container">
+        <div class="row row-30">
+            <div class="col-md-4 col-xl-5">
+                <div class="pr-xl-4">
+                    <a class="brand" href="index"><img
+                            class="brand-logo-light"
+                            src="resources/images/judyair_logo.png"
+                            style="width:75%; padding-top: 25px; padding-bottom: 25px;"></a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h3 style="color: #B1B1B1">Contacts</h3>
+                <div class="bottom-text-text">
+                    <dl class="contact-list">
+                        <dd>주디에어 (JudyAir)</dd>
+                    </dl>
+                    <dl class="contact-list">
+                        <dd>프로젝트명 : JudyProject</dd>
+                    </dl>
+                    <dl class="contact-list">
+                        <dd>공항주소 : 서구 계룡로 636, 7층</dd>
+                    </dl>
+                    <dl class="contact-list">
+                        <dd>공항번호 : +081034906612</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>

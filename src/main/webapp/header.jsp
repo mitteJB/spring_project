@@ -9,7 +9,7 @@
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top">
 		<a class="navbar-brand" href="goindex"><img
 						class="brand-logo-light"
-						src="resources/images/bomair_logo.png" style="width:20%; padding-top: 5px;"></a>
+						src="resources/images/judyair_logo.png" style="width:50%; padding-top: 5px;"></a>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-lg-auto">
 				
@@ -30,7 +30,7 @@
 
 				<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="dropdown01"
-					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">항공권
+					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >항공권
 						예매</a>
 				<li class="nav-item"><a class="nav-link" href="mybook?g_id=${id }">나의
 						예매</a></li>
