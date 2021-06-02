@@ -20,8 +20,8 @@ body {
 }
 
 .btn-group-lg > .btn, .btn-lg {
-    padding: 20px 40px;
-    font-size: 15px;
+    padding: 10px 23px;
+    font-size: 12px;
     line-height: 1.5;
     border-radius: 50px;
     font-weight: bolder;
@@ -276,6 +276,9 @@ body {
 
 .table2 #Depart, .table2 #Arrive, .table2 #GoDateChoose, .table2 #BackDateChoose, .table2 #people {
     height: 60px;
+    font-size: 15px;
+    padding-left: 5px;
+
 }
 
 
