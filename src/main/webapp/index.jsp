@@ -3,6 +3,8 @@
          pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+
+
 <html>
 <head>
     <!-- Bootstrap -->
@@ -30,14 +32,15 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <%--				<img src="resources/images/bg1.jpg" class="d-block w-100" alt="...">--%>
-            <img src="${pageContext.request.contextPath}/resources/images/bg1.jpg" class="d-block w-100" alt="...">
+<%--            <img src="${pageContext.request.contextPath}/resources/images/bg1.jpg" class="d-block w-100" alt="...">--%>
+            <video src="resources/images/bgmovie.mp4" autoplay muted loop style="width: 100%; height: auto"></video>
         </div>
-        <div class="carousel-item">
-            <img src="resources/images/bg2.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="resources/images/bg3.jpg" class="d-block w-100" alt="...">
-        </div>
+<%--        <div class="carousel-item">--%>
+<%--            <img src="resources/images/bg2.jpg" class="d-block w-100" alt="...">--%>
+<%--        </div>--%>
+<%--        <div class="carousel-item">--%>
+<%--            <img src="resources/images/bg3.jpg" class="d-block w-100" alt="...">--%>
+<%--        </div>--%>
     </div>
     <div class="modal" id="myModal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-sm">
@@ -260,7 +263,8 @@
     </li>
     <li><a href="https://github.com/Catching-Java"><img src="resources/images/u.png" style="width: 25px; height: 25px;"></a>
     </li>
-    <li><a href="https://github.com/pigletmong2"><img src="resources/images/d.png" style="width: 25px; height: 25px;"></a></li>
+    <li><a href="https://github.com/pigletmong2"><img src="resources/images/d.png"
+                                                      style="width: 25px; height: 25px;"></a></li>
     <li><a href="https://github.com/movie4568"><img src="resources/images/y.png" style="width: 25px; height: 25px;"></a>
     </li>
 </ul>
