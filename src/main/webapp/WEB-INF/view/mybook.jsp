@@ -44,6 +44,11 @@
     <hr class="hrCss">
     <br>
 
+
+	<c:if test="${id eq null }">
+		<c:redirect url="login"/>
+	</c:if>
+    
     <div class="webCheckInArea basicFont">
 
         <c:set var="mybook" value="${mybook }"/>
@@ -76,7 +81,7 @@
                                         <c:when test="${fn:substring(my.air_name,2,3) eq '1'}">제주(CJU)</c:when>
                                         <c:when test="${fn:substring(my.air_name,2,3) eq '2'}">도쿄(NPT)</c:when>
                                         <c:when test="${fn:substring(my.air_name,2,3) eq '3'}">오사카(KIX)</c:when>
-                                        <c:when test="${fn:substring(my.air_name,2,3) eq '4'}">후쿠오카(FUK)</c:when>
+                                        <c:when test="${fn:s ubstring(my.air_name,2,3) eq '4'}">후쿠오카(FUK)</c:when>
                                         <c:when test="${fn:substring(my.air_name,2,3) eq '5'}">홍콩(HKG)</c:when>
                                         <c:when test="${fn:substring(my.air_name,2,3) eq '6'}">방콕(BKK)</c:when>
                                         <c:when test="${fn:substring(my.air_name,2,3) eq '7'}">코타키나발루(BKI)</c:when>
