@@ -20,7 +20,7 @@
                         <dd>주디에어 (JudyAir)</dd>
                     </dl>
                     <dl class="contact-list">
-                        <dd>프로젝트명 : JudyProject</dd>
+                        <dd>프로젝트명 : 준도영 프로젝트</dd>
                     </dl>
                     <dl class="contact-list">
                         <dd>공항주소 : 서구 계룡로 636, 7층</dd>

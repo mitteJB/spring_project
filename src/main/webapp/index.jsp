@@ -4,13 +4,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
-
 <html>
 <head>
     <!-- Bootstrap -->
     <%@include file="/bootstrap.jsp" %>
     <link rel="stylesheet" type="text/css" href="resources/css/style.css?after">
-    <title>BOM AIR :: Best Of Most Airline & Rent Car</title>
+    <title>JUDY AIR || JUn Do Young Airline</title>
 </head>
 <body>
 
@@ -21,27 +20,18 @@
 
 <!-- 배경화면 슬라이드 -->
 
-<div id="carouselExampleIndicators" class="carousel slide"
-     data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0"
-            class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+<%--        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>--%>
+<%--        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>--%>
+<%--        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>--%>
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <%--				<img src="resources/images/bg1.jpg" class="d-block w-100" alt="...">--%>
-<%--            <img src="${pageContext.request.contextPath}/resources/images/bg1.jpg" class="d-block w-100" alt="...">--%>
             <video src="resources/images/bgmovie.mp4" autoplay muted loop style="width: 100%; height: auto"></video>
         </div>
-<%--        <div class="carousel-item">--%>
-<%--            <img src="resources/images/bg2.jpg" class="d-block w-100" alt="...">--%>
-<%--        </div>--%>
-<%--        <div class="carousel-item">--%>
-<%--            <img src="resources/images/bg3.jpg" class="d-block w-100" alt="...">--%>
-<%--        </div>--%>
     </div>
+
     <div class="modal" id="myModal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -69,6 +59,7 @@
         </div>
     </div>
 </div>
+
 <div id="gonggi2">
     <div class="row" style="width: 1000px">
         <div class="col-md-6">
@@ -82,6 +73,7 @@
     </div>
 </div>
 
+<%--공지사항 옆 움직이는 이미지--%>
 <div id="accorDiv">
     <div class="accordian">
         <ul>
@@ -124,131 +116,106 @@
         <div class="col-xl-12">
             <div class="pricing-table">
                 <div class="panel panel-primary" style="border: none;">
-                    <div class="controle-header panel-heading panel-heading-landing">
-                        <h1 class="panel-title panel-title-landing">
-                            <img class="brand-logo-light" src="resources/images/bomair_logo.png"
-                                 style="width:50%;">
-                        </h1>
-                    </div>
                     <div
                             class="controle-panel-heading panel-heading panel-heading-landing-box">
-                        Best Of Most Airline & Rent Car
+                        JUn Do Yong Ariline
                     </div>
                     <div class="panel-body panel-body-landing">
                         <!-- 빠른예약 창(항공권)-->
-                        <table class="table" id="reservation-table" style="width: 380px;">
+                        <table class="table" id="reservation-table" style="width: 100%;">
                             <tr>
-                                <td style="width: 50%"><input type="button" value="항공권"
-                                                              name="reservation" style="width: 100%"></td>
-                                <td style="width: 50%"><input type="button" value="렌트카"
-                                                              name="rent" style="width: 100%"></td>
+                                <td class="flightWay">
+                                    <label>
+                                        <input type="radio" name="flightWay" value="round" checked="checked"/>
+                                    </label><a>왕복</a>
+                                    <label>
+                                        <input type="radio" name="flightWay" value="one_way"/>
+                                    </label><a>편도</a>
+                                </td>
                             </tr>
+                        </table>
+                        <table class="table2">
                             <tr>
-                                <td colspan="2" style="text-align: center;" class="flightWay">
-                                    <input type="radio" name="flightWay" value="round" checked="checked"/>왕복
-                                    <input type="radio" name="flightWay" value="one_way"/>편도
-                                <td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" style="text-align: center;"><select
-                                        id="Depart" style="width: 100%">
-                                    <option>출발지 선택</option>
-                                    <option value="inc" style="width: 100%">인천(INC)</option>
-                                </select></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" style="text-align: center;"><select
-                                        id="Arrive" style="width: 100%">
-                                    <option>도착지 선택</option>
-                                    <optgroup label="국내">
-                                        <option value="CJU" style="width: 100%">제주(CJU)</option>
-                                    </optgroup>
-                                    <optgroup label="일본">
-                                        <option value="NPT" style="width: 100%">도쿄(NPT)</option>
-                                        <option value="KIX" style="width: 100%">오사카(KIX)</option>
-                                        <option value="FUK" style="width: 100%">후쿠오카(FUK)</option>
-                                    </optgroup>
-                                    <optgroup label="동남아">
-                                        <option value="HKG" style="width: 100%">홍콩(HKG)</option>
-                                        <option value="BKK" style="width: 100%">방콕(BKK)</option>
-                                        <option value="BKI" style="width: 100%">코타키나발루(BKI)</option>
-                                    </optgroup>
-                                    <optgroup label="그외 지역">
-                                        <option value="WO" style="width: 100%">블라디보스토크(WO)</option>
-                                        <option value="JFK" style="width: 100%">뉴욕(JFK)</option>
-                                    </optgroup>
-                                </select></td>
-                            </tr>
-                            <tr id="ReservationDateTr">
-                                <td id="goDate" style="width: 50%"><input type="text"
-                                                                          class="testDatepicker" id="GoDateChoose"
-                                                                          style="width: 100%"
-                                                                          placeholder="출발 날짜 선택"></td>
-                                <td id="backDate" style="width: 50%"><input type="text"
-                                                                            class="testDatepicker" id="BackDateChoose"
-                                                                            style="width: 100%"
-                                                                            placeholder="복귀 날짜 선택"></td>
-                            </tr>
-                            <tr>
+                                <%--                                출발지--%>
+                                <td id="Depart_td">
+                                    <select id="Depart">
+                                        <option>출발지 선택</option>
+                                        <option value="inc">인천(INC)</option>
+                                    </select>
+                                </td>
+                                <%--                                도착지--%>
+                                <td id="Arrive_td">
+                                    <select id="Arrive">
+                                        <option>도착지 선택</option>
+                                        <optgroup label="국내">
+                                            <option value="CJU" style="width: 100%">제주(CJU)</option>
+                                        </optgroup>
+                                        <optgroup label="일본">
+                                            <option value="NPT" style="width: 100%">도쿄(NPT)</option>
+                                            <option value="KIX" style="width: 100%">오사카(KIX)</option>
+                                            <option value="FUK" style="width: 100%">후쿠오카(FUK)</option>
+                                        </optgroup>
+                                        <optgroup label="동남아">
+                                            <option value="HKG" style="width: 100%">홍콩(HKG)</option>
+                                            <option value="BKK" style="width: 100%">방콕(BKK)</option>
+                                            <option value="BKI" style="width: 100%">코타키나발루(BKI)</option>
+                                        </optgroup>
+                                        <optgroup label="그외 지역">
+                                            <option value="WO" style="width: 100%">블라디보스토크(WO)</option>
+                                            <option value="JFK" style="width: 100%">뉴욕(JFK)</option>
+                                        </optgroup>
+                                    </select>
+                                </td>
+                                <%--                                출발날짜--%>
+                                <td id="goDate">
+                                    <input type="text"
+                                           class="testDatepicker" id="GoDateChoose"
+                                           placeholder="출발 날짜 선택"></td>
+                                <td id="backDate">
+                                    <input type="text"
+                                           class="testDatepicker" id="BackDateChoose"
+                                           placeholder="복귀 날짜 선택"></td>
+
                                 <td colspan="2"><input type="text" id="people"
-                                                       name="people" placeholder="인원수" style="width: 100%"
+                                                       name="people" placeholder="인원수"
                                                        data-toggle="modal" data-target="#myModal" readonly="readonly">
                                 </td>
                             </tr>
                         </table>
 
 
-                        <table class="table" id="rent-table"
-                               style="width: 380px; display: none;">
-                            <tr>
-                                <td style="width: 50%"><input type="button" value="항공권"
-                                                              name="reservation" style="width: 100%"></td>
-                                <td style="width: 50%"><input type="button" value="렌트카"
-                                                              name="rent" style="width: 100%"></td>
-                            </tr>
-                            <tr id="RentPlaceTr">
-                                <td colspan="2" style="text-align: center;"><select
-                                        id="RentPlaceTd" style="width: 100%">
-                                    <option id="RentPlace_Sel_Opt">렌트 장소 선택</option>
-                                    <optgroup label="국내">
-                                        <option value="CJU" style="width: 100%">CJU(제주)</option>
-                                    </optgroup>
-                                    <optgroup label="일본">
-                                        <option value="NPT" style="width: 100%">NPT(도쿄)</option>
-                                        <option value="KIX" style="width: 100%">KIX(오사카)</option>
-                                        <option value="FUK" style="width: 100%">FUK(후쿠오카)</option>
-                                    </optgroup>
-                                    <optgroup label="동남아">
-                                        <option value="HKG" style="width: 100%">HKG(홍콩)</option>
-                                        <option value="BKK" style="width: 100%">BKK(방콕)</option>
-                                        <option value="BKI" style="width: 100%">BKI(코타키나발루)</option>
-                                    </optgroup>
-                                    <optgroup label="그외 지역">
-                                        <option value="WO" style="width: 100%">WO(블라디보스토크)</option>
-                                        <option value="JFK" style="width: 100%">JFK(뉴욕)</option>
-                                    </optgroup>
-                                </select></td>
-                            </tr>
-                            <tr id="RentDateTr">
-                                <td id="goDate" style="width: 50%"><input type="text"
-                                                                          class="testDatepicker" id="RentDateChoose"
-                                                                          style="width: 100%"
-                                                                          placeholder="렌트 날짜 선택"></td>
-                                <td id="backDate" style="width: 50%"><input type="text"
-                                                                            class="testDatepicker" id="ReturnDateChoose"
-                                                                            style="width: 100%" placeholder="반납 날짜 선택">
-                                </td>
-                            </tr>
+                        <%--                            <tr id="ReservationDateTr">--%>
+                        <%--                                <td id="goDate" style="width: 50%">--%>
+                        <%--                                    <input type="text"--%>
+                        <%--                                           class="testDatepicker" id="GoDateChoose"--%>
+                        <%--                                           style="width: 100%"--%>
+                        <%--                                           placeholder="출발 날짜 선택"></td>--%>
+                        <%--                                <td id="backDate" style="width: 50%">--%>
+                        <%--                                    <input type="text"--%>
+                        <%--                                           class="testDatepicker" id="BackDateChoose"--%>
+                        <%--                                           style="width: 100%"--%>
+                        <%--                                           placeholder="복귀 날짜 선택"></td>--%>
+                        <%--                            </tr>--%>
+                        <%--                            <tr>--%>
+                        <%--                                <td colspan="2"><input type="text" id="people"--%>
+                        <%--                                                       name="people" placeholder="인원수" style="width: 100%"--%>
+                        <%--                                                       data-toggle="modal" data-target="#myModal" readonly="readonly">--%>
+                        <%--                                </td>--%>
+                        <%--                            </tr>--%>
                         </table>
+
+                        <%--                        빠른예약항공###########--%>
+
+
                     </div>
-                    <div class="panel-footer panel-footer-landing" id="searchHang">
+                    <div class="panel-footer panel-footer-landing" id="searchHang" style="text-align: right; ">
                         <a href="#" class="btn btn-price btn-success btn-lg"
                            id="reservationsubmit">일정으로 조회</a>
                     </div>
-
                     <div class="panel-footer panel-footer-landing" id="searchRent"
                          style="display: none;">
-                        <a href="#" class="btn btn-price btn-success btn-lg" id="rentsubmit">일정으로 조회</a>
+                        <a href="#" class="btn btn-price btn-success btn-lg" id="rentsubmit" style="left: 90%">일정으로
+                            조회</a>
                     </div>
                 </div>
             </div>
