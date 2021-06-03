@@ -12,8 +12,11 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <%@include file="/bootstrap.jsp" %>
-    <%@include file="/bootstrap_login.jsp" %>
+	<%@include file="/bootstrap.jsp" %>
+	
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<%--     <%@include file="/bootstrap_login.jsp" %> --%>
     <link rel="stylesheet" href="resources/css/login.css">
     <script src="resources/js/login.js"></script>
 
@@ -58,7 +61,7 @@
         <!-- The Modal ID-->
         <div id="id_myModal" class="modal">
             <!-- Modal content -->
-            <div class="modal-content" style="width: 50%; margin-top: 230px; margin-left: 450px">
+            <div class="modal-content" style="width: 100%;">
                 <p style="text-align: center;"><span style="font-size: 14pt;"><b><span
                         style="font-size: 24pt;">아이디 찾기</span></b></span></p>
                 <p style="text-align: center; line-height: 1.5;"><br/></p>
@@ -77,7 +80,7 @@
 					<input id="find_g_tel3" maxlength="4" type="text"/></span></p>
                 <p style="text-align: center; line-height: 1.5;"><br/></p>
                 <p style="text-align: center; line-height: 1.5;">
-                    <button class="btn btn-primary btn-lg" id="id_find">아이디 찾기</button>
+                    <button class="btn btn-primary btn-lg" id="find_id">아이디 찾기</button>
                 </p>
                 <div id="find_id_content">Hello</div>
                 <div style="cursor:pointer;background-color:#DDDDDD;text-align: center;padding-bottom: 10px;padding-top: 10px;"
@@ -93,7 +96,7 @@
         <!-- The Modal PWD-->
         <div id="pwd_myModal" class="modal">
             <!-- Modal content -->
-            <div class="modal-content" style="width: 50%; margin-top: 230px; margin-left: 450px">
+            <div class="modal-content" style="width: 100%;">
                 <p style="text-align: center;"><span style="font-size: 14pt;"><b><span
                         style="font-size: 24pt;">비밀번호 찾기</span></b></span></p>
                 <p style="text-align: center; line-height: 1.5;"><span style="font-size: 14pt;">이름: <input
@@ -128,8 +131,8 @@
 
         <!--End Modal-->
         <div class="goRegister"><a href="register">&nbsp;회원가입</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="#" onclick='find_id()'>아이디 찾기</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="#" onclick='find_pwd()'>비밀번호찾기</a>
+            <a href="#" data-toggle="modal" data-target="#id_myModal">아이디 찾기</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#" data-toggle="modal" data-target="#pwd_myModal">비밀번호찾기</a>
         </div>
     </div>
 </div> <!-- /container -->

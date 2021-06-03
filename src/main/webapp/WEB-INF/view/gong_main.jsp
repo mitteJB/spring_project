@@ -35,7 +35,7 @@
 				<c:if test="${id eq 'admin' }">
 					<th colspan="2">관리자 권한</th>
 				</c:if>
-				<c:if test="${id ne null && id eq id}">
+				<c:if test="${id ne null && id eq id &&id ne 'admin'}">
 				<th colspan="2">게시물 관리</th>
 				</c:if>
 			</tr>
@@ -44,16 +44,21 @@
 					<td>${s.num }</td>
 					<td
 						onClick="location.href='gong_detail?num=${s.num}&spage=<%=request.getParameter("spage")%>&sword=${sword}'"
-						style="cursor: pointer; width: 500px;">${s.title }</td>
+						style="cursor: pointer; width: 500px;">
+					
+					<c:if test="${s.writer eq 'JudyAir'}"><b>${s.title }</b></c:if>
+					<c:if test="${s.writer ne 'JudyAir'}">${s.title }</c:if></td>
+					
 					<td>${s.readcnt }</td>
 					<td>${s.writer }</td>
 					<td>${s.bdate }</td>
+				
 					<c:if test="${id eq 'admin'}">
 						<td><a
 							href="gong_update?num=${s.num}&spage=<%=request.getParameter("spage")%>&sword=${sword}">수정</a></td>
 						<td><a href="#" onclick="delchk(${s.num },'${sword}')">삭제</a></td>
 					</c:if>
-					<c:if test="${id ne null && id eq s.writer}">
+					<c:if test="${id ne null && id eq s.writer && id ne 'admin'}">
 						<td><a
 							href="gong_update?num=${s.num}&spage=<%=request.getParameter("spage")%>&sword=${sword}">수정</a></td>
 						<td><a href="#" onclick="delchk(${s.num },'${sword}')">삭제</a></td>

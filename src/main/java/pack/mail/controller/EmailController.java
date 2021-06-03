@@ -7,6 +7,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -37,15 +39,21 @@ public class EmailController {
 			return "success";
 		}
 		
-		@RequestMapping("find_pwd")
+		@GetMapping("find_pwd")
+		   @ResponseBody
+		   public void getJson() {
+		   }
+		
+		@PostMapping("find_pwd")
 		   @ResponseBody
 		   public HashMap<String, Object> getJson(@RequestParam("name") String name,@RequestParam("tel") String tel,@RequestParam("id") String id) {
-			  HashMap<String, Object> paramap = new HashMap<String, Object>();
+			HashMap<String, Object> paramap = new HashMap<String, Object>();
 			  HashMap<String, Object> map = new HashMap<String, Object>();
 			  paramap.put("g_name",name);
 		      paramap.put("g_tel",tel);
 		      paramap.put("g_id",id);
 		      boolean b = emailSender.sendPwd(paramap);
+		      System.out.println("bool:"+b);
 		      if(b==false)
 		    	  map.put("result","false");
 		      else
