@@ -1,11 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Write something else you want</title>
+<header>
+		<%@ include file="../../header.jsp"%>
+</header>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/
@@ -46,6 +50,8 @@
 </script>
 </head>
 <body>
+	
+	<section style="margin-top: 150px" >
 	<div class="container">
 		<table class="table table-bordered">
 			<thead>
@@ -53,6 +59,10 @@
 			</thead>
 			<tbody>
 				<form action="gong_write" method="post" id="frm">
+					<tr>
+						<th>작성자:</th>
+						<td><input type="text" name="writer" class="form-control" id="writer" value="${id}" readonly="readonly"/></td>
+					</tr>
 					<tr>
 						<th>제목:</th>
 						<td><input type="text" placeholder="제목을 입력하세요. " name="subject" class="form-control" id='subject'/></td>
@@ -65,12 +75,14 @@
 					</tr>
 					<tr>
 						<td colspan="5"><input type="button" value="등록" class="pull-right" id="confirm"/> 
-							<input type="button" value="초기하" class="pull-left" id="reset" /> 
+							<input type="button" value="초기화" class="pull-left" id="reset" /> 
 							<input type="button" value="글 목록으로... " class="pull-right" onclick="javascript:location.href='gong_list?spage=1'"/></td>
 					</tr>
 				</form>
 			</tbody>
 		</table>
 	</div>
+	</section>
+	<%@ include file="/bottom.jsp"%>
 </body>
 </html>
