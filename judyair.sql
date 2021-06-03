@@ -20,8 +20,11 @@ CREATE TABLE gong
     title   VARCHAR(20) NOT NULL,
     con     TEXT        DEFAULT NULL,
     readcnt INT(5)      DEFAULT NULL,
+    writer  VARCHAR(20) NOT NULL,
     bdate   VARCHAR(20) DEFAULT NULL
 );
+
+ALTER TABLE gong CONVERT TO CHARACTER SET UTF8;
 
 CREATE TABLE car
 (
