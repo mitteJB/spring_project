@@ -9,7 +9,7 @@
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top">
 		<a class="navbar-brand" href="goindex"><img
 						class="brand-logo-light"
-						src="resources/images/judyair_logo.png" style="width:50%; padding-top: 5px;"></a>
+						src="resources/images/judyair_logo2.png" style="width:50%; padding-top: 5px;"></a>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-lg-auto">
 				
@@ -48,3 +48,13 @@
 		</div>
 	</nav>
 </div>
+<ul class="sci" style="opacity: 0.7">
+	<li><a href="https://github.com/mitteJB"><img src="resources/images/j.png" style="width: 25px; height: 25px;"></a>
+	</li>
+	<li><a href="https://github.com/Catching-Java"><img src="resources/images/u.png" style="width: 25px; height: 25px;"></a>
+	</li>
+	<li><a href="https://github.com/pigletmong2"><img src="resources/images/d.png"
+													  style="width: 25px; height: 25px;"></a></li>
+	<li><a href="https://github.com/movie4568"><img src="resources/images/y.png" style="width: 25px; height: 25px;"></a>
+	</li>
+</ul>

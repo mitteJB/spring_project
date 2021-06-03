@@ -205,15 +205,13 @@
                         </table>
 
                         <%--                        빠른예약항공###########--%>
-
-
                     </div>
                     <div class="panel-footer panel-footer-landing" id="searchHang" style="text-align: right; ">
                         <a href="#" class="btn btn-price btn-success btn-lg"
                            id="reservationsubmit">일정으로 조회</a>
                     </div>
                     <div class="panel-footer panel-footer-landing" id="searchRent"
-                         style="display: none;">
+                         style="display:none;">
                         <a href="#" class="btn btn-price btn-success btn-lg" id="rentsubmit" style="left: 90%">일정으로
                             조회</a>
                     </div>
@@ -225,7 +223,7 @@
 </div>
 
 
-<ul class="sci" style="opacity: 0.5">
+<%--<ul class="sci" style="opacity: 0.7">
     <li><a href="https://github.com/mitteJB"><img src="resources/images/j.png" style="width: 25px; height: 25px;"></a>
     </li>
     <li><a href="https://github.com/Catching-Java"><img src="resources/images/u.png" style="width: 25px; height: 25px;"></a>
@@ -234,7 +232,7 @@
                                                       style="width: 25px; height: 25px;"></a></li>
     <li><a href="https://github.com/movie4568"><img src="resources/images/y.png" style="width: 25px; height: 25px;"></a>
     </li>
-</ul>
+</ul>--%>
 
 
 <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top"
