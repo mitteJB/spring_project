@@ -39,7 +39,7 @@
 <body>
 
 <div class="container">
-    <div class="logo"><a href="index.jsp"><img src="resources/images/judyair_logo.png"/></a></div>
+    <div class="logo"><a href="index.jsp"><img src="resources/images/judyair_logo2.png"/></a></div>
     <h4><%=g_id %>님의 항공예약 내역입니다.</h4>
     <hr class="hrCss">
     <br>

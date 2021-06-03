@@ -15,7 +15,7 @@
 				
 				
 				<c:if test="${id ne null }">
-					<li class="nav-item dropdown" style="color:white;">${id }님<br>안녕하세요!</li>				
+					<li class="nav-item dropdown" id="login_id">${id }님 안녕하세요!</li>
 				</c:if>
 				
 				<c:if test="${id eq 'admin' }">

@@ -23,7 +23,7 @@
 <body class="basicFont">
 
 <div class="container">
-    <div class="logo"><a href="index.jsp"><img src="resources/images/judyair_logo.png"/></a></div>
+    <div class="logo"><a href="index.jsp"><img src="resources/images/judyair_logo2.png"/></a></div>
 <%--    <div class="imgLogin col-md-4"><img id="imgLogin" src="resources/images/imgLogin.PNG"/></div>--%>
     <div class="loginField col-md-pull-10">
 <%--        <h4 style="font-size: 25px;">Bom Air에 오신 것을 환영합니다!</h4>--%>

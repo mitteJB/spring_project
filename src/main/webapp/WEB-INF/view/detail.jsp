@@ -46,7 +46,7 @@
 
 </head>
 <body class="basicFont container">
-<div class="logo"><a href="index.jsp"><img src="resources/images/judyair_logo.png" alt=""/></a></div>
+<div class="logo"><a href="index.jsp"><img src="resources/images/judyair_logo2.png" alt=""/></a></div>
 <br>
 <hr class="hrCss">
 <br>
