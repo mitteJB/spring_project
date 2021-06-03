@@ -26,6 +26,7 @@
 	<section>
 		<!-- 게시글 목록 -->
 		<table border="1" class="table" style="margin-top: 200px">
+			<caption style="caption-side:top;">커뮤니티</caption>
 			<tr style="background-color: silver; color: black;">
 				<th>번호</th>
 				<th>제목</th>
@@ -35,9 +36,9 @@
 				<c:if test="${id eq 'admin' }">
 					<th colspan="2">관리자 권한</th>
 				</c:if>
-				<c:if test="${id ne null && id eq id &&id ne 'admin'}">
+				<%-- <c:if test="${id ne null && id eq id &&id ne 'admin'}">
 				<th colspan="2">게시물 관리</th>
-				</c:if>
+				</c:if> --%>
 			</tr>
 			<c:forEach var="s" items="${list}">
 				<tr>
@@ -58,11 +59,11 @@
 							href="gong_update?num=${s.num}&spage=<%=request.getParameter("spage")%>&sword=${sword}">수정</a></td>
 						<td><a href="#" onclick="delchk(${s.num },'${sword}')">삭제</a></td>
 					</c:if>
-					<c:if test="${id ne null && id eq s.writer && id ne 'admin'}">
+<%-- 					<c:if test="${id ne null && id eq s.writer && id ne 'admin'}">
 						<td><a
 							href="gong_update?num=${s.num}&spage=<%=request.getParameter("spage")%>&sword=${sword}">수정</a></td>
 						<td><a href="#" onclick="delchk(${s.num },'${sword}')">삭제</a></td>
-					</c:if>
+					</c:if> --%>
 				</tr>
 			</c:forEach>
 		</table>

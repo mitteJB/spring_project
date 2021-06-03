@@ -72,3 +72,9 @@
 		</div>
 	</nav>
 </div>
+<ul class="sci" style="opacity: 0.5">
+		<li><a href="https://blog.naver.com/mint3081"><img
+				src="resources/images/facebook.png"></a></li>
+		<li><a href="#"><img src="resources/images/twitter.png"></a></li>
+		<li><a href="#"><img src="resources/images/instagram.png"></a></li>
+	</ul>

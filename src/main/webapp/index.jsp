@@ -7,7 +7,7 @@
 <head>
 <!-- Bootstrap -->
 <%@include file="/bootstrap.jsp"%>
-<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+<link rel="stylesheet" type="text/css" href="resources/css/style.css?after">
 <title>BOM AIR :: Best Of Most Airline & Rent Car</title>
 </head>
 <body>
@@ -244,12 +244,12 @@
 	</div>
 
 
-	<ul class="sci" style="opacity: 0.5">
+<!-- 	<ul class="sci" style="opacity: 0.5">
 		<li><a href="https://blog.naver.com/mint3081"><img
 				src="resources/images/facebook.png"></a></li>
 		<li><a href="#"><img src="resources/images/twitter.png"></a></li>
 		<li><a href="#"><img src="resources/images/instagram.png"></a></li>
-	</ul>
+	</ul> -->
 
 
 	<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top"

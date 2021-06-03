@@ -132,7 +132,7 @@ body
 }
 .sci
 {
-	position: absolute;
+	position: fixed;
 	right: 0;
 	top: 50%;
 	transform: translateY(-50%);
@@ -267,6 +267,7 @@ body
     color: rgb(45, 50, 70) !important;
     -webkit-transition:  all .3s ease;
 }
+
 .panel-heading-landing {
     background: #f7f7f7 !important; 
     padding: 20px !important; 
@@ -291,7 +292,7 @@ body
 }
 .panel-footer-landing { 
     border-bottom-left-radius: none !important; 
-    border-bottom-right-radius: none; !important; 
+    border-bottom-right-radius: none !important; 
     border-top: none !important;
 }
 
@@ -316,7 +317,7 @@ body
 	max-width: 500px;
 	
     }
-}
+
 .modal-body{
 	text-align: center;
 }
@@ -521,4 +522,27 @@ ul.timeline > li:before {
 .navbar {
 	background-color:rgba(45, 50, 70,0.9);
 	margin : 0;
+}
+/* gong_update_form.jsp, gong_write.jsp */
+#confirm{
+	margin-right:20px;
+	float:right;
+}
+
+#reset{
+	margin-right:20px;
+	float:right;
+}
+
+#reset{
+	margin-left:20px;
+}
+
+#gotolist{
+	margin-left:20px;
+}
+
+#gotolist1{
+	margin-right:20px;
+	float:right;
 }
