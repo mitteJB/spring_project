@@ -19,13 +19,8 @@
 </header>
 
 <!-- 배경화면 슬라이드 -->
-
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-<%--        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>--%>
-<%--        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>--%>
-<%--        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>--%>
-    </ol>
+    <ol class="carousel-indicators"></ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
             <video src="resources/images/bgmovie.mp4" autoplay muted loop style="width: 100%; height: auto"></video>
@@ -36,15 +31,17 @@
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-body">
-                    성인: <input type="button" id="decAd" value="▽"><span
-                        id="numberUpDown1">1</span><input type="button" id="incAd"
-                                                          value="△"><br> <br>소아: <input type="button"
-                                                                                        id="decCh" value="▽"><span
-                        id="numberUpDown2">0</span><input
-                        id="incCh" type="button" value="△"><br> <br>유아:
-                    <input type="button" id="decBa" value="▽"><span
-                        id="numberUpDown3">0</span><input id="incBa" type="button"
-                                                          value="△"><br>
+                    성인: <input type="button" id="decAd" value="▽">
+                    <span id="numberUpDown1">1</span>
+                    <input type="button" id="incAd" value="△"><br> <br>소아: <input type="button" id="decCh" value="▽">
+                    <span id="numberUpDown2">0</span>
+                    <input id="incCh" type="button" value="△">
+                    <br>
+                    <br>
+                    유아:
+                    <input type="button" id="decBa" value="▽">
+                    <span id="numberUpDown3">0</span><input id="incBa" type="button" value="△">
+                    <br>
                     <hr>
                     <b>소아</b> : 국내선 만 2세~만12세<Br> 국제선 만 2세~만11세<br> <b>유아</b>
                     : 만2세 미만<br>
@@ -60,6 +57,7 @@
     </div>
 </div>
 
+<%--공지사항--%>
 <div id="gonggi2">
     <div class="row" style="width: 1000px">
         <div class="col-md-6">
@@ -110,15 +108,15 @@
         </ul>
     </div>
 </div>
+
 <!-- 빠른예약 창 -->
 <div class="imsi-container">
     <div class="row text-center">
         <div class="col-xl-12">
             <div class="pricing-table">
                 <div class="panel panel-primary" style="border: none;">
-                    <div
-                            class="controle-panel-heading panel-heading panel-heading-landing-box">
-                        JUn Do Yong Ariline
+                    <div class="controle-panel-heading panel-heading panel-heading-landing-box">
+                        JUn Do Yong AIRline
                     </div>
                     <div class="panel-body panel-body-landing">
                         <!-- 빠른예약 창(항공권)-->
@@ -182,29 +180,6 @@
                                 </td>
                             </tr>
                         </table>
-
-
-                        <%--                            <tr id="ReservationDateTr">--%>
-                        <%--                                <td id="goDate" style="width: 50%">--%>
-                        <%--                                    <input type="text"--%>
-                        <%--                                           class="testDatepicker" id="GoDateChoose"--%>
-                        <%--                                           style="width: 100%"--%>
-                        <%--                                           placeholder="출발 날짜 선택"></td>--%>
-                        <%--                                <td id="backDate" style="width: 50%">--%>
-                        <%--                                    <input type="text"--%>
-                        <%--                                           class="testDatepicker" id="BackDateChoose"--%>
-                        <%--                                           style="width: 100%"--%>
-                        <%--                                           placeholder="복귀 날짜 선택"></td>--%>
-                        <%--                            </tr>--%>
-                        <%--                            <tr>--%>
-                        <%--                                <td colspan="2"><input type="text" id="people"--%>
-                        <%--                                                       name="people" placeholder="인원수" style="width: 100%"--%>
-                        <%--                                                       data-toggle="modal" data-target="#myModal" readonly="readonly">--%>
-                        <%--                                </td>--%>
-                        <%--                            </tr>--%>
-                        </table>
-
-                        <%--                        빠른예약항공###########--%>
                     </div>
                     <div class="panel-footer panel-footer-landing" id="searchHang" style="text-align: right; ">
                         <a href="#" class="btn btn-price btn-success btn-lg"
@@ -219,10 +194,10 @@
             </div>
         </div>
     </div>
-
 </div>
 
 
+<%--우측 아이콘 4개--%>
 <%--<ul class="sci" style="opacity: 0.7">
     <li><a href="https://github.com/mitteJB"><img src="resources/images/j.png" style="width: 25px; height: 25px;"></a>
     </li>
@@ -234,11 +209,12 @@
     </li>
 </ul>--%>
 
-
+<%--좌하단 위로가기 버튼--%>
 <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top"
    role="button" data-toggle="tooltip" data-placement="left"><span
         class="glyphicon glyphicon-chevron-up"></span></a>
 <%@include file="./bottom.jsp" %>
+
 
 <form action="airinfo" method="post" id="O_frm">
     <input type="hidden" name="l_code">
@@ -252,6 +228,5 @@
     <input type="hidden" name="o_sdate_R">
     <input type="hidden" name="people">
 </form>
-
 </body>
 </html>
