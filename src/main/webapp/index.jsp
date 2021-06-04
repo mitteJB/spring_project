@@ -5,9 +5,100 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Bootstrap -->
 <%@include file="/bootstrap.jsp"%>
+
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+     <style>
+          .swiper_1 {
+               width: 1170px;
+               margin: 0 auto 20px;
+          }
+
+          .swiper_2 {
+               width: 1280px;
+               height: 424px;
+               margin-top: 50px;
+			   margin-right: auto;
+			   margin-bottom: 250px;
+			   margin-left: auto;
+               
+          }
+
+          .swiper_3 {
+               width: 1170px;
+               height: 424px;
+          }
+     </style>
+     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+     <script>
+          $(function () {
+               var swiper = new Swiper('.swiper_1', {
+                    slidesPerView: 3,
+                    spaceBetween: 18,
+                    pagination: {
+                         el: '.swiper-pagination',
+                         clickable: true,
+                    },
+                    autoplay: {
+                         delay: 3000,
+                    },
+                    navigation: {
+                         nextEl: '.swiper-button-next',
+                         prevEl: '.swiper-button-prev',
+                    }
+               });
+
+               var swiper = new Swiper('.swiper_2', {
+            	   loop: true, 
+            	   loopFillGroupWithBlank: true,
+            	   observer: true,
+            	   observeParents: true,
+            	   
+
+
+                    pagination: {
+                         el: '.swiper-pagination',
+                         type: 'progressbar',
+                    },
+                    autoplay: {
+                         delay: 3000,
+                    },
+                    navigation: {
+                         nextEl: '.swiper-button-next',
+                         prevEl: '.swiper-button-prev',
+                    }
+               });
+
+               var swiper = new Swiper('.swiper_3', {
+                    direction: 'vertical',
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    mousewheel: true,
+                    pagination: {
+                         el: '.swiper-pagination',
+                         clickable: true,
+                    },
+                    autoplay: {
+                         delay: 3000,
+                    }
+               });
+          });
+     </script>
+
+	
 <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+<!-- <link rel="stylesheet" type="text/css" href="resources/css/swiper.css"> -->
+<!-- <link rel="stylesheet" type="text/css" href="resources/css/tht.css"> -->
+
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+ -->
+<!-- <link rel="stylesheet" href="resources/css/tht.css"> -->
 <title>BOM AIR :: Best Of Most Airline & Rent Car</title>
 </head>
 <body>
@@ -21,23 +112,28 @@
 
 	<div id="carouselExampleIndicators" class="carousel slide"
 		data-ride="carousel">
-		<ol class="carousel-indicators">
+		<!-- <ol class="carousel-indicators">
 			<li data-target="#carouselExampleIndicators" data-slide-to="0"
 				class="active"></li>
 			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-		</ol>
+		</ol> -->
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-<%--				<img src="resources/images/bg1.jpg" class="d-block w-100" alt="...">--%>
-				<img src="${pageContext.request.contextPath}/resources/images/bg1.jpg" class="d-block w-100" alt="...">
+				<img src="resources/images/airplane_.gif" class="d-block w-100" alt="...">
+				<%-- <img src="${pageContext.request.contextPath}/resources/images/bg1.jpg" class="d-block w-100" alt="..."> --%>
+				<!-- <iframe src="https://www.youtube.com/embed/pRq2jWK7rPI?autoplay=1&mute=1 " 
+				width="100%" height="670" frameborder="0" allow="autoplay"></iframe> -->
+				
+				<!-- <img alt="..." src="resources/images/beach.gif" class="d-block w-100"> --> <!-- 배경 이미지 gif 배경 -->
+				
 			</div>
-			<div class="carousel-item">
+			<!-- <div class="carousel-item">
 				<img src="resources/images/bg2.jpg" class="d-block w-100" alt="...">
 			</div>
 			<div class="carousel-item">
 				<img src="resources/images/bg3.jpg" class="d-block w-100" alt="...">
-			</div>
+			</div> -->
 		</div>
 		<div class="modal" id="myModal" tabindex="-1" role="dialog">
 			<div class="modal-dialog modal-sm">
@@ -82,72 +178,87 @@
 			<ul>
 				<li>
 					<div class="image_title"></div> <a href="#"> <img
-						src="resources/images/bg1.jpg">
+						src="resources/images/polynesia.jpg">
 				</a>
 				</li>
 				<li>
 					<div class="image_title"></div> <a href="#"> <img
-						src="resources/images/bg2.jpg">
+						src="resources/images/house.jpg">
 				</a>
 				</li>
 				<li>
 					<div class="image_title"></div> <a href="#"> <img
-						src="resources/images/bg3.jpg">
+						src="resources/images/joshua-earle.jpg">
 				</a>
 				</li>
 				<li>
 					<div class="image_title"></div> <a href="#"> <img
-						src="resources/images/bg1.jpg">
+						src="resources/images/dino-reichmuth.jpg">
 				</a>
 				</li>
 				<li>
 					<div class="image_title"></div> <a href="#"> <img
-						src="resources/images/bg2.jpg">
+						src="resources/images/beach-6292382_640.jpg">
 				</a>
 				</li>
 			</ul>
 		</div>
 	</div>
+	
+	
+	
+	
+
+	
+	
 	<!-- 빠른예약 창 -->
 	<div class="imsi-container">
 		<div class="row text-center">
 			<div class="col-xl-12">
+			
 				<div class="pricing-table">
+				
+				
+				
 					<div class="panel panel-primary" style="border: none;">
-						<div class="controle-header panel-heading panel-heading-landing">
-							<h1 class="panel-title panel-title-landing">
-								<img class="brand-logo-light" src="resources/images/bomair_logo.png" 
-									style="width:50%;">
-							</h1>
-						</div>
-						<div
-							class="controle-panel-heading panel-heading panel-heading-landing-box">
-							Best Of Most Airline & Rent Car</div>
-						<div class="panel-body panel-body-landing">
+						
+						
 							<!-- 빠른예약 창(항공권)-->
-							<table class="table" id="reservation-table" style="width: 380px;">
+							<table class="table" id="reservation-table" style="width: 1280px; ">
+								
 								<tr>
-									<td style="width: 50%"><input type="button" value="항공권"
-										name="reservation" style="width: 100%"></td>
-									<td style="width: 50%"><input type="button" value="렌트카"
-										name="rent" style="width: 100%"></td>
-								</tr>
-								<tr>
-									<td colspan="2" style="text-align: center;" class="flightWay">
+									<!-- <td style="width: 50%"><input type="button" value="항공권"
+										name="reservation" style="width: 100%"></td> -->
+									
+										
+									<td style="width: 50%; text-align: left;" >
+									
 									<input type="radio" name="flightWay" value="round" checked="checked"/>왕복
-									<input type="radio" name="flightWay" value="one_way" />편도
-									<td>
+									<input type="radio" name="flightWay" value="one_way" />편도</td>
+									
+									
+									
+									
+									
+								
 								</tr>
 								<tr>
-									<td colspan="2" style="text-align: center;"><select
-										id="Depart" style="width: 100%">
+							
+									<td style="width: 50%; text-align: left;" >
+									
+									<select
+										id="Depart" style="width: 100%; margin: 10px;" >
 											<option>출발지 선택</option>
 											<option value="inc" style="width: 100%">인천(INC)</option>
+											
 									</select></td>
-								</tr>
-								<tr>
-									<td colspan="2" style="text-align: center;"><select
-										id="Arrive" style="width: 100%">
+									
+									
+									
+								
+									<td style="width: 50%; text-align: left;" >
+									<select
+										id="Arrive" style="width: 100%; margin: 10px;" >
 											<option>도착지 선택</option>
 											<optgroup label="국내">
 												<option value="CJU" style="width: 100%">제주(CJU)</option>
@@ -167,81 +278,128 @@
 												<option value="JFK" style="width: 100%">뉴욕(JFK)</option>
 											</optgroup>
 									</select></td>
-								</tr>
-								<tr id="ReservationDateTr">
+									
+									<td colspan="2"><input type="text" id="people"
+										name="people" placeholder="인원수" style="/* width: 30% */ margin: 10px;"
+										data-toggle="modal" data-target="#myModal" readonly="readonly"></td>
+									</td>
+									
+									</tr>
+								<tr>	
+								
+								<!-- <tr id="ReservationDateTr" style="width: 50%"> -->
+								
 									<td id="goDate" style="width: 50%"><input type="text"
-										class="testDatepicker" id="GoDateChoose" style="width: 100%"
+										class="testDatepicker" id="GoDateChoose" style="width: 100%; margin: 10px;"
 										placeholder="출발 날짜 선택"></td>
 									<td id="backDate" style="width: 50%"><input type="text"
-										class="testDatepicker" id="BackDateChoose" style="width: 100%"
+										class="testDatepicker" id="BackDateChoose" style="width: 100%; margin: 10px;"
 										placeholder="복귀 날짜 선택"></td>
-								</tr>
-								<tr>
-									<td colspan="2"><input type="text" id="people"
-										name="people" placeholder="인원수" style="width: 100%"
+									<td id ="searchHang">
+										<a href="#" class="btn btn-primary btn-sm" style="align:right; font-size: 1.5rem;  padding: .375rem 1.5rem; margin:10px;  /* margin-right: -10rem; */ width: -webkit-fill-available;" 
+								id="reservationsubmit">항공권 검색<!-- <img src="resources/images/tripPlanArea_icon.jpg"> --></a></td>
+									<!-- <td colspan="2"><input type="text" id="people"
+										name="people" placeholder="인원수" style="/* width: 30% */"
 										data-toggle="modal" data-target="#myModal" readonly="readonly"></td>
+									</td> -->
+										
 								</tr>
+								
+								
+								
 							</table>
+							<!-- <td id ="searchHang">
+										<a href="#" class="btn btn-primary" style="align:right; font-size: 2.3rem;  padding: .375rem 1.5rem; margin-bottom: .75rem;  margin-right: -112rem;" 
+								id="reservationsubmit">항공권 검색<img src="resources/images/tripPlanArea_icon.jpg"></a></td> -->
 
 
 
 
-							<table class="table" id="rent-table"
-								style="width: 380px; display: none;">
-								<tr>
-									<td style="width: 50%"><input type="button" value="항공권"
-										name="reservation" style="width: 100%"></td>
-									<td style="width: 50%"><input type="button" value="렌트카"
-										name="rent" style="width: 100%"></td>
-								</tr>
-								<tr id="RentPlaceTr">
-									<td colspan="2" style="text-align: center;"><select
-										id="RentPlaceTd" style="width: 100%">
-											<option id="RentPlace_Sel_Opt">렌트 장소 선택</option>
-											<optgroup label="국내">
-												<option value="CJU" style="width: 100%">CJU(제주)</option>
-											</optgroup>
-											<optgroup label="일본">
-												<option value="NPT" style="width: 100%">NPT(도쿄)</option>
-												<option value="KIX" style="width: 100%">KIX(오사카)</option>
-												<option value="FUK" style="width: 100%">FUK(후쿠오카)</option>
-											</optgroup>
-											<optgroup label="동남아">
-												<option value="HKG" style="width: 100%">HKG(홍콩)</option>
-												<option value="BKK" style="width: 100%">BKK(방콕)</option>
-												<option value="BKI" style="width: 100%">BKI(코타키나발루)</option>
-											</optgroup>
-											<optgroup label="그외 지역">
-												<option value="WO" style="width: 100%">WO(블라디보스토크)</option>
-												<option value="JFK" style="width: 100%">JFK(뉴욕)</option>
-											</optgroup>
-									</select></td>
-								</tr>
-								<tr id="RentDateTr">
-									<td id="goDate" style="width: 50%"><input type="text"
-										class="testDatepicker" id="RentDateChoose" style="width: 100%"
-										placeholder="렌트 날짜 선택"></td>
-									<td id="backDate" style="width: 50%"><input type="text"
-										class="testDatepicker" id="ReturnDateChoose"
-										style="width: 100%" placeholder="반납 날짜 선택"></td>
-								</tr>
-							</table>
+							
 						</div>
-						<div class="panel-footer panel-footer-landing" id="searchHang">
+						
+						
+						<!-- <div class="panel-footer panel-footer-landing" id="searchHang">
 							<a href="#" class="btn btn-price btn-success btn-lg"
 								id="reservationsubmit" >일정으로 조회</a>
 						</div>
-
 						<div class="panel-footer panel-footer-landing" id="searchRent"
 							style="display: none;">
 							<a href="#" class="btn btn-price btn-success btn-lg" id="rentsubmit">일정으로 조회</a>
-						</div>
+						</div> -->
+						</tr>
 					</div>
 				</div>
 			</div>
 		</div>
+		
+		
+		
 
+	
+	
+	
+	
+		<div class="promotionD" >
+    <div class="inner">
+        <div class="textMotionD" >
+            <div class="motionTit textD" >
+                <p>주디에어가 추천드리는 <br />다양한 여행지를<span></span> 확인하세요</p>
+            </div>
+            <p class="line" style="left: 590px; width: 690px;"></p>
+            <a href="#" class="viewMore"><img src="resources/images/viewMore.png" alt="" style=""/></a>
+        </div>
+        <div class="topD">
+            <div class="visualD" style="opacity: 1; top: 0px;">
+            	<div class="list" style="display: block;"><a href="#">
+            	<img src="resources/images/main_f_recommend_bangkok.jpg" alt=""></a></div>
+            
+            	<div class="list" style="display: block;"><a href="#">
+            	<img src="resources/images/main_f_recommend_cebu.jpg" alt=""></a></div>
+            	
+            	<div class="list" style="display: block;"><a href="#">
+            	<img src="resources/images/main_f_recommend_jeju2.jpg" alt=""></a></div>
+            	
+            	<div class="list" style="display: block;"><a href="#">
+            	<img src="resources/images/main_f_recommend_paris.jpg" alt=""></a></div>
+            </div>
+            <div class="tabs"></div>
+        </div>
+
+    </div>
+</div>
+	
+	
+	<div class="promotionD">
+	<div class="inner">
+		<div class="textMotionD">
+			<div class="motionTit textD">
+				<p>여행을 위한 가장 올바른 선택<br/><span>주디에어가 </span>함께합니다 </p>
+			</div>
+				<p class="line" style="left: 590px; width: 690px;" ></p>
+            	
+		</div>
 	</div>
+	
+	<div class="swiper-container swiper_2">
+          <div class="swiper-wrapper">
+               <a href="#" class="swiper-slide">
+                    <img src="resources/images/judyair_banner-1.jpg" alt="슬라이드이미지" style="width: 1280px;"></a>
+               
+                <a href="#" class="swiper-slide">
+                    <img src="resources/images/judyair_banner-2.jpg" alt="슬라이드이미지" style="width: 1280px;"></a>
+               
+                <a href="#" class="swiper-slide">
+                    <img src="resources/images/judyair_banner-3.jpg" alt="슬라이드이미지" style="width: 1280px;"></a>
+              
+                <!-- <a href="#" class="swiper-slide">
+                    <img src="resources/images/bg3.jpg" alt="슬라이드이미지"></a> -->
+               
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+     </div>
 
 
 	<ul class="sci" style="opacity: 0.5">
