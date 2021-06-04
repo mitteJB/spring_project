@@ -553,11 +553,16 @@ ul.timeline > li:before {
     margin: 0;
 }
 
+/*바텀 텍스트 스타일*/
 .bottom-text-text {
     font-size: 15px;
     color: #B1B1B1;
     margin: auto;
     padding-left: 3px;
+}
+
+.row {
+    text-align: center;
 }
 
 /*로그인시 헤더에 뜨는 텍스트*/
