@@ -31,7 +31,7 @@ function close_pop() {
 
 $(document).ready(
 		function() {
-			$("#id_find").on(
+			$('#id_myModal').on(
 					"click",
 					function() {
 						$.ajax({
@@ -58,7 +58,7 @@ $(document).ready(
 								$("#find_id_content").html(str);
 							},
 							error : function() {
-								alert("에러발생");
+								alert("error");
 							}
 						});
 					})
@@ -66,7 +66,7 @@ $(document).ready(
 
 $(document).ready(
 		function() {
-			$("#pwd_find").on(
+			$("#pwd_myModal").on(
 					"click",
 					function() {
 						$.ajax({
@@ -81,14 +81,14 @@ $(document).ready(
 							},
 							dataType : "json",
 							success : function(data) {
+							
 								if(data.result=="true"){
 									alert("메일이 성공적으로 발송되었습니다.");
 								}else{
-									alert("등록된 정보가 없습니다.");
 								}
 							},
 							error : function() {
-								alert("등록된 정보가 없습니다.");
+								alert("error");
 							}
 						});
 					})

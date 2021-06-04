@@ -32,6 +32,9 @@
 				<a class="nav-link dropdown-toggle" href="#" id="dropdown01"
 					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >항공권
 						예매</a>
+					<div class="dropdown-menu" aria-labelledby="dropdown01">
+						<a class="dropdown-item" href="booking">항공권 예매</a>
+					</div></li>
 				<li class="nav-item"><a class="nav-link" href="mybook?g_id=${id }">나의
 						예매</a></li>
 				<c:if test="${id ne null }">

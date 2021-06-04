@@ -3,6 +3,14 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<script>
+	function delchk(num,word){
+		if(confirm("정말 삭제 하시겠습니까?")){
+			location.href="gong_delete?num="+num+"&spage="+<%=request.getParameter("spage")%>+"&sword="+word;
+}
+}
+
+</script>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,17 +45,20 @@
 	<section style="margin-top: 150px" >
 	<div class="container">
 		<table class="table table-bordered">
-			<thead>
-			</thead>
 			<tbody>
 				<form action="gong_register" method="get" id="frm">
 					<tr>
-						<th>작성자:</th>
-						<td><input type="text" name="writer" class="form-control" id="writer" value="${dto.writer}" readonly="readonly"/></td>
+						<td colspan="4">
+						<a style="margin-right:20px; float:right;" href="gong_list?spage=${spage}&sword=${sword}">이전으로</a>
+						</td>
 					</tr>
 					<tr>
 						<th>제목:</th>
-						<td><input type="text" placeholder="제목을 입력하세요. " name="subject" class="form-control" id='subject' value='${dto.title}' readonly="readonly"/></td>
+						<td colspan="4"><input type="text" placeholder="제목을 입력하세요. " name="subject" class="form-control" id='subject' value='${dto.title}' readonly="readonly"/></td>
+					</tr>
+					<tr>
+						<th>작성자:</th>
+						<td><input type="text" name="writer" class="form-control" id="writer" value="${dto.writer}" readonly="readonly"/></td>
 						<th>날짜:</th>
 						<td><input type="text" name="date" class="form-control" id="date" value='${dto.bdate}' readonly="readonly"/></td>
 					</tr>
@@ -56,7 +67,12 @@
 						<td colspan="4"><textarea cols="10" rows="20" placeholder="내용을 입력하세요. " name="content" class="form-control" id="content" readonly="readonly">${dto.con}</textarea></td>
 					</tr>
 					<tr>
-							<input type="button" value="글 목록으로... " class="pull-right" onclick="javascript:location.href='gong_list?spage=${spage}&sword=${sword}'"/></td>
+						<c:if test="${id ne null && id eq dto.writer}">
+							<td colspan="4">
+							<a style="margin-right:20px; float:right;" href="gong_update?num=${dto.num}&spage=<%=request.getParameter("spage")%>&sword=${sword}">수정</a>
+							<a style="margin-right:20px; float:right;" href="#" onclick="delchk(${dto.num },'${sword}')">삭제</a>
+							</td>
+						</c:if>
 					</tr>
 				</form>
 			</tbody>

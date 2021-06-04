@@ -695,3 +695,27 @@ ul.timeline > li:before {
     -o-transition:all .3s ease-out!important;
 }
 /*영화추가끝*/
+
+/* gong_update_form.jsp, gong_write.jsp */
+#confirm{
+    margin-right:20px;
+    float:right;
+}
+
+#reset{
+    margin-right:20px;
+    float:right;
+}
+
+#reset{
+	margin-left:20px;
+}
+
+#gotolist{
+	margin-left:20px;
+}
+
+#gotolist1{
+	margin-right:20px;
+	float:right;
+}

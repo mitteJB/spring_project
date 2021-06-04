@@ -12,9 +12,12 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <%@include file="/bootstrap.jsp" %>
-    <%@include file="/bootstrap_login.jsp" %>
-    <link rel="stylesheet" href="resources/css/login.css?after">
+	<%@include file="/bootstrap.jsp" %>
+
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<%--     <%@include file="/bootstrap_login.jsp" %> --%>
+    <link rel="stylesheet" href="resources/css/login.css">
     <script src="resources/js/login.js"></script>
 
     <title>Bom Air : Login Page</title>
@@ -132,8 +135,8 @@
 
         <!--End Modal-->
         <div class="goRegister"><a href="register">&nbsp;회원가입</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="#" onclick='find_id()'>아이디 찾기</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="#" onclick='find_pwd()'>비밀번호찾기</a>
+            <a href="#" data-toggle="modal" data-target="#id_myModal">아이디 찾기</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#" data-toggle="modal" data-target="#pwd_myModal">비밀번호찾기</a>
         </div>
     </div>
 </div> <!-- /container -->

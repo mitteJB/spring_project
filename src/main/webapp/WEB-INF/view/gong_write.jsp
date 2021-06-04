@@ -1,15 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Write something else you want</title>
-<header>
-		<%@ include file="../../header.jsp"%>
-</header>
+
+<title>새글쓰기</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/
@@ -49,19 +49,31 @@
 	});
 </script>
 </head>
+
+<%@include file="/bootstrap.jsp"%>
+<link rel="stylesheet" type="text/css" href="resources/css/style.css?after">
 <body>
-	
+	<header>
+		<%@ include file="../../header.jsp"%>
+	</header>
 	<section style="margin-top: 150px" >
 	<div class="container">
 		<table class="table table-bordered">
-			<thead>
-			<caption>글쓰기</caption>
-			</thead>
 			<tbody>
-				<form action="gong_write" method="post" id="frm">
+				<form action="gong_write" method="post" id="frm" enctype="multipart/form-data">
+					<tr>
+						<th colspan="4" style="background-color: #eeeeee; text-align: center;">게시물 작성</th>
+					</tr>
 					<tr>
 						<th>작성자:</th>
-						<td><input type="text" name="writer" class="form-control" id="writer" value="${id}" readonly="readonly"/></td>
+						<td>
+						<c:if test="${id ne 'admin'}">
+						<input type="text" name="writer" class="form-control" id="writer" value="${id}" readonly="readonly"/>
+						</c:if>
+						<c:if test="${id eq 'admin'}">
+						<input type="text" name="writer" class="form-control" id="writer" value="JudyAir" readonly="readonly"/>
+						</c:if>
+						</td>
 					</tr>
 					<tr>
 						<th>제목:</th>
@@ -71,16 +83,20 @@
 					</tr>
 					<tr>
 						<th>내용:</th>
-						<td colspan="4"><textarea cols="10" placeholder="내용을 입력하세요. " name="content" class="form-control" id="content"></textarea></td>
+						<td colspan="4"><textarea cols="10" rows="20" placeholder="내용을 입력하세요. " name="content" class="form-control" id="content"></textarea></td>
 					</tr>
 					<tr>
-						<td colspan="5"><input type="button" value="등록" class="pull-right" id="confirm"/> 
-							<input type="button" value="초기화" class="pull-left" id="reset" /> 
-							<input type="button" value="글 목록으로... " class="pull-right" onclick="javascript:location.href='gong_list?spage=1'"/></td>
+						<td colspan="5">
+						<a id="confirm" href="javascript:void(0);" onclick="function(confirm);">등록하기</a>
+						<a id="reset" href="javascript:void(0);" onclick="function(reset);">초기화</a>  
+						<a id="gotolist" href="gong_list?spage=1">목록으로 이동</a>
+						</td>
 					</tr>
 				</form>
 			</tbody>
 		</table>
+		
+		file: <input type="file" name="file">
 	</div>
 	</section>
 	<%@ include file="/bottom.jsp"%>
