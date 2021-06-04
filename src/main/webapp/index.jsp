@@ -10,6 +10,87 @@
     <%@include file="/bootstrap.jsp" %>
     <link rel="stylesheet" type="text/css" href="resources/css/style.css?after">
     <title>JUDY AIR || JUn Do Young Airline</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        .swiper_1 {
+            width: 1170px;
+            margin: 0 auto 20px;
+        }
+
+        .swiper_2 {
+            width: 1280px;
+            height: 424px;
+            margin-top: 50px;
+            margin-right: auto;
+            margin-bottom: 250px;
+            margin-left: auto;
+
+        }
+
+        .swiper_3 {
+            width: 1170px;
+            height: 424px;
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        $(function () {
+            var swiper = new Swiper('.swiper_1', {
+                slidesPerView: 3,
+                spaceBetween: 18,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                autoplay: {
+                    delay: 3000,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            });
+
+            var swiper = new Swiper('.swiper_2', {
+                loop: true,
+                loopFillGroupWithBlank: true,
+                observer: true,
+                observeParents: true,
+
+
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'progressbar',
+                },
+                autoplay: {
+                    delay: 3000,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            });
+
+            var swiper = new Swiper('.swiper_3', {
+                direction: 'vertical',
+                slidesPerView: 1,
+                spaceBetween: 30,
+                mousewheel: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                autoplay: {
+                    delay: 3000,
+                }
+            });
+        });
+    </script>
+
+
 </head>
 <body>
 
@@ -73,40 +154,40 @@
 
 <%--공지사항 옆 움직이는 이미지--%>
 <div id="accorDiv">
-    <div class="accordian">
-        <ul>
-            <li>
-                <div class="image_title"></div>
-                <a href="#"> <img
-                        src="resources/images/bg1.jpg">
-                </a>
-            </li>
-            <li>
-                <div class="image_title"></div>
-                <a href="#"> <img
-                        src="resources/images/bg2.jpg">
-                </a>
-            </li>
-            <li>
-                <div class="image_title"></div>
-                <a href="#"> <img
-                        src="resources/images/bg3.jpg">
-                </a>
-            </li>
-            <li>
-                <div class="image_title"></div>
-                <a href="#"> <img
-                        src="resources/images/bg1.jpg">
-                </a>
-            </li>
-            <li>
-                <div class="image_title"></div>
-                <a href="#"> <img
-                        src="resources/images/bg2.jpg">
-                </a>
-            </li>
-        </ul>
-    </div>
+	<div class="accordian">
+		<ul>
+			<li>
+				<div class="image_title"></div>
+				<a href="#"> <img
+						src="resources/images/polynesia.jpg">
+				</a>
+			</li>
+			<li>
+				<div class="image_title"></div>
+				<a href="#"> <img
+						src="resources/images/house.jpg">
+				</a>
+			</li>
+			<li>
+				<div class="image_title"></div>
+				<a href="#"> <img
+						src="resources/images/joshua-earle.jpg">
+				</a>
+			</li>
+			<li>
+				<div class="image_title"></div>
+				<a href="#"> <img
+						src="resources/images/dino-reichmuth.jpg">
+				</a>
+			</li>
+			<li>
+				<div class="image_title"></div>
+				<a href="#"> <img
+						src="resources/images/beach-6292382_640.jpg">
+				</a>
+			</li>
+		</ul>
+	</div>
 </div>
 
 <!-- 빠른예약 창 -->
@@ -196,24 +277,67 @@
     </div>
 </div>
 
+<%--영화1--%>
+<div class="promotionD">
+    <div class="inner">
+        <div class="textMotionD">
+            <div class="motionTit textD">
+                <p>주디에어가 추천드리는 <br/>다양한 여행지를<span></span> 확인하세요</p>
+            </div>
+            <p class="line" style="left: 590px; width: 690px;"></p>
+            <a href="#" class="viewMore"><img src="resources/images/viewMore.png" alt="" style=""/></a>
+        </div>
+        <div class="topD">
+            <div class="visualD" style="opacity: 1; top: 0px;">
+                <div class="list" style="display: block;"><a href="#">
+                    <img src="resources/images/main_f_recommend_bangkok.jpg" alt=""></a></div>
 
-<%--우측 아이콘 4개--%>
-<%--<ul class="sci" style="opacity: 0.7">
-    <li><a href="https://github.com/mitteJB"><img src="resources/images/j.png" style="width: 25px; height: 25px;"></a>
-    </li>
-    <li><a href="https://github.com/Catching-Java"><img src="resources/images/u.png" style="width: 25px; height: 25px;"></a>
-    </li>
-    <li><a href="https://github.com/pigletmong2"><img src="resources/images/d.png"
-                                                      style="width: 25px; height: 25px;"></a></li>
-    <li><a href="https://github.com/movie4568"><img src="resources/images/y.png" style="width: 25px; height: 25px;"></a>
-    </li>
-</ul>--%>
+                <div class="list" style="display: block;"><a href="#">
+                    <img src="resources/images/main_f_recommend_cebu.jpg" alt=""></a></div>
 
-<%--좌하단 위로가기 버튼--%>
-<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top"
-   role="button" data-toggle="tooltip" data-placement="left"><span
-        class="glyphicon glyphicon-chevron-up"></span></a>
-<%@include file="./bottom.jsp" %>
+                <div class="list" style="display: block;"><a href="#">
+                    <img src="resources/images/main_f_recommend_jeju2.jpg" alt=""></a></div>
+
+                <div class="list" style="display: block;"><a href="#">
+                    <img src="resources/images/main_f_recommend_paris.jpg" alt=""></a></div>
+            </div>
+            <div class="tabs"></div>
+        </div>
+    </div>
+</div>
+
+<%--영화2--%>
+<div class="promotionD">
+    <div class="inner">
+        <div class="textMotionD">
+            <div class="motionTit textD">
+                <p>여행을 위한 가장 올바른 선택<br/><span>주디에어가 </span>함께합니다 </p>
+            </div>
+            <p class="line" style="left: 590px; width: 690px;"></p>
+
+        </div>
+    </div>
+
+    <div class="swiper-container swiper_2">
+        <div class="swiper-wrapper">
+            <a href="#" class="swiper-slide">
+                <img src="resources/images/judyair_banner-1.jpg" alt="슬라이드이미지" style="width: 1280px;"></a>
+
+            <a href="#" class="swiper-slide">
+                <img src="resources/images/judyair_banner-2.jpg" alt="슬라이드이미지" style="width: 1280px;"></a>
+
+            <a href="#" class="swiper-slide">
+                <img src="resources/images/judyair_banner-3.jpg" alt="슬라이드이미지" style="width: 1280px;"></a>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top"
+       role="button" data-toggle="tooltip" data-placement="left"><span
+            class="glyphicon glyphicon-chevron-up"></span></a>
+    <%@include file="./bottom.jsp" %>
 
 
 <form action="airinfo" method="post" id="O_frm">

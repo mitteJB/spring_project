@@ -181,7 +181,6 @@ body {
     -webkit-transition: all .3s ease;
     border-radius: 0px;
 }
-
 .pricing-table:hover {
     box-shadow: 0px 0px 30px rgba(0, 0, 0, .2);
 }
@@ -300,7 +299,6 @@ body {
     border: none;
     border-bottom: none !important;
 }
-
 .panel-heading-landing-box {
     background: rgb(0, 178, 237) !important;
     color: #fff !important;
@@ -363,8 +361,9 @@ body {
     margin-top: 250px;
     margin-left: 400px;
 
-
+	
 }
+
 
 
 .context-dark, .bg-gray-dark, .bg-primary {
@@ -374,7 +373,6 @@ body {
 .footer-classic a, .footer-classic a:focus, .footer-classic a:active {
     color: #ffffff;
 }
-
 .nav-list li {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -402,11 +400,9 @@ ul, ol {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.5);
 }
-
 .social-container .col {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 .nav-list li a:before {
     content: "\f14f";
     font: 400 21px/1 "Material Design Icons";
@@ -438,47 +434,45 @@ Width of container : 500 + 50*4 = 700px;
 Default 700/5 : 140px;
 */
 
-.accordian {
-    width: 1000px;
-    height: 333px;
-    overflow: hidden;
-
-    margin: 50px auto;
-    -webkit-box-shadow: 0 8px 6px -6px black;
-    -moz-box-shadow: 0 8px 6px -6px black;
-    box-shadow: 0px 8px 6px -6px black;
+.accordian{
+  width: 1000px;
+  height: 333px;
+  overflow:hidden;
+  
+  margin: 200px auto;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0px 8px 6px -6px black;
+}
+.accordian ul{
+  
+}
+.accordian li{
+  position: relative;
+  display:block;
+  width:140px;
+  float: left;
+  
+  border-left: 1px solid #888;
+  -webkit-box-shadow: 0 0 25px 10px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 0 25px 10px rgba(0,0,0,0.5);
+  
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
 }
 
-.accordian ul {
 
+.accordian ul:hover li{
+  width: 100px;
 }
 
-.accordian li {
-    position: relative;
-    display: block;
-    width: 140px;
-    float: left;
-
-    border-left: 1px solid #888;
-    -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
+.accordian ul li:hover{
+  width:500px;
 }
 
-
-.accordian ul:hover li {
-    width: 70px;
-}
-
-.accordian ul li:hover {
-    width: 500px;
-}
-
-.accordian li img {
-    display: block;
+.accordian li img{
+  display: block;
 }
 
 .image_title {
@@ -502,22 +496,21 @@ Default 700/5 : 140px;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: none;
+    display:none;
 }
 
 #gonggi2 {
-    width: 400px;
-    float: left;
-    height: 333px;
-    margin-top: 80px;
-    margin-left: 80px;
+	width: 400px;
+	float: left;
+	height: 100px;
+	margin-top: 200px;
+	margin-left: 80px;
 }
 
 ul.timeline {
     list-style-type: none;
     position: relative;
 }
-
 ul.timeline:before {
     content: ' ';
     background: #d4d9df;
@@ -528,7 +521,6 @@ ul.timeline:before {
     height: 100%;
     z-index: 400;
 }
-
 ul.timeline > li {
     margin: 20px 0;
     padding-left: 20px;
@@ -547,10 +539,14 @@ ul.timeline > li:before {
     z-index: 400;
 }
 
+.btn-success{
+	background: rgb(45, 50, 70) !important;
+	border-color: rgb(45, 50, 70) !important;
+}
 
 .navbar {
-    background-color: rgba(255, 255, 255, 0.7);
-    margin: 0;
+	background-color:rgba(45, 50, 70,0.9);
+	margin : 0;
 }
 
 /*바텀 텍스트 스타일*/
@@ -574,3 +570,133 @@ ul.timeline > li:before {
     margin-left: 1.2rem;
     margin-right: 1.2rem
 }
+
+
+/*영화추가*/
+.promotionD {
+    position: relative;
+    margin-top: 20px;
+    padding-top: 95px;
+}
+.inner {
+    position: relative;
+    margin: 0 auto;
+    width: 1280px;
+}
+.textMotionD {
+    position: relative;
+    z-index: 2;
+}
+.promotionD .textMotionD .line {
+    /* top: 105px; */
+    left: 580px;
+}
+.textMotionD .line {
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #000;
+    transition: width 0.5s cubic-bezier(.55,0,.1,1) 0.9s, opacity 0.5s cubic-bezier(.55,0,.1,1) 0.3s;
+}
+.textMotionD .textD {
+    position: relative;
+    display: inline-block;
+    padding-right: 40px;
+    overflow: hidden;
+}
+
+.textMotionD .textD p {
+    display: inline-block;
+    font-size: 48px;
+    line-height: 56px;
+    color: #000;
+    text-align: left;
+
+    letter-spacing: -3px;
+}
+.viewMore {
+    position: absolute;
+    top: 65px;
+    right: 0;
+}
+.topD {
+    margin-top: 50px;
+    position: relative;
+    padding-bottom: 64px;
+}
+.imgResize img {
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bottomD {
+
+    width: 100%;
+    /*  height: 730px; */
+    position: relative;
+    padding-bottom: 64px;
+}
+.proSwiper {
+    margin: 50px auto 0;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    position: relative;
+    text-align: center;
+}
+.swiper-button-prev {
+    top: 40px;
+    left: 10px;
+    margin-top: 160px;
+    width: 26px;
+    height: 9px;
+
+}
+.swiper-button-next {
+    top: 40px;
+    right: 10px;
+    margin-top: 160px;
+    width: 26px;
+    height: 9px;
+}
+
+.visualD {
+    float:left;
+    width:1280px;
+    height:540px;
+    margin-right: 20px;
+}
+.visualD .list{
+    float:left;
+    width:305px;
+    height:420px;
+    position:relative;
+    display:block;
+    z-index:2;
+    border-radius:2px;
+    overflow:hidden;
+    margin-right: 15px;
+}
+.visualD a {
+    width:100%;
+    height:158px;
+    display:block;
+    transition:all .3s ease-out!important;
+    -webkit-transition:all .3s ease-out!important;
+    -moz-transition:all .3s ease-out!important;
+    -o-transition:all .3s ease-out!important;
+}
+.visualD a:hover {
+    -webkit-transform:scale(1.1) rotate(-1.5deg)!important;
+    -moz-transform:scale(1.1) rotate(-1.5deg)!important;
+    transform:scale(1.1) rotate(-1.5deg)!important;
+    transition:all .3s ease-out!important;
+    -webkit-transition:all .3s ease-out!important;
+    -moz-transition:all .3s ease-out!important;
+    -o-transition:all .3s ease-out!important;
+}
+/*영화추가끝*/
