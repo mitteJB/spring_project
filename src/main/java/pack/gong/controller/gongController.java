@@ -8,14 +8,13 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import pack.gong.model.gongDto;
@@ -32,29 +31,30 @@ public class gongController {
 	@Qualifier("gongImpl")
 	private gongImpl inter;
 
-	//글 전체보기
+
+	//	글 전체보기 ModelAndView -> Model
 	@RequestMapping("gong_list")
-	private ModelAndView process(@RequestParam("spage") String spage, HttpServletRequest request) {
+	private String process(Model model, @RequestParam("spage") String spage, HttpServletRequest request) {
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		if (request.getParameter("sword") == null)
 			map.put("sword", "All");
 		else
 			map.put("sword", request.getParameter("sword"));
-		
+	
 		tot = inter.Pagesu(map);
-
+	
 		if (tot % pList == 0)
 			pageSu = tot / pList;
 		else
 			pageSu = tot / pList + 1;
-
+	
 		int page = Integer.parseInt(spage);
-
+	
 		if (page % 5 != 0)
 			blocksu = page / 5 + 1;
 		else
 			blocksu = page / 5;
-
+	
 		List<gongDto> list = inter.selectList(map);
 		int k = 0;
 		ArrayList<gongDto> list2 = new ArrayList<gongDto>();
@@ -65,21 +65,21 @@ public class gongController {
 				dto.setTitle(list.get(((page - 1) * pList) + k).getTitle());
 				dto.setBdate(list.get(((page - 1) * pList) + k).getBdate());
 				dto.setReadcnt(list.get(((page - 1) * pList) + k).getReadcnt());
+				dto.setWriter(list.get(((page - 1) * pList) + k).getWriter());
 				list2.add(dto);
 				k++;
 			}
 		} catch (Exception e) {
 			System.out.println("페이지수 예외처리" + e);
 		}
-
-		ModelAndView view = new ModelAndView();
-		view.setViewName("gong_main");
-		view.addObject("list", list2);
-		view.addObject("su", pageSu);
-		view.addObject("bsu", blocksu);
-		view.addObject("sword", map.get("sword"));
-		return view;
+	
+		model.addAttribute("list", list2);
+		model.addAttribute("su", pageSu);
+		model.addAttribute("bsu", blocksu);
+		model.addAttribute("sword", map.get("sword"));
+		return "gong_main";
 	}
+
 
 	//index의 요약된 자료 보기
 	@RequestMapping("gong_main")
@@ -107,26 +107,34 @@ public class gongController {
 	}
 
 	//새글 쓰기 양식
-	@RequestMapping(value="gong_write",method = RequestMethod.GET)
+	@GetMapping("gong_write")
 	private String gong_write() {
 		return "gong_write";
 	}
-	
+
 	//새 글 쓰기
-	@RequestMapping(value="gong_write",method = RequestMethod.POST)
-	private void process_register(HttpServletResponse response, @RequestParam("subject") String subject,
-			@RequestParam("date") String date, @RequestParam("content") String content) {
+	@PostMapping("gong_write")
+	private void process_register(HttpServletResponse response,
+								  @RequestParam("subject") String subject,
+								  @RequestParam("date") String date,
+								  @RequestParam("content") String content,
+								  @RequestParam("writer") String writer) {
+		
+
+		
 		int x = inter.maxNum();
-		gongBean bean = new gongBean();
-		bean.setBdate(date);
-		bean.setTitle(subject);
-		bean.setCon(content);
-		bean.setNum(x + 1);
-		inter.register(bean);
+		System.out.println(x);
+		gongDto dto = new gongDto();
+		dto.setBdate(date);
+		dto.setTitle(subject);
+		dto.setCon(content);
+		dto.setWriter(writer);
+		dto.setNum(x + 1);
+		inter.register(dto);
 		try {
 			response.sendRedirect("gong_list?spage=1");
 		} catch (IOException e) {
-			System.out.println("insert Error");
+			System.out.println("Insert Error");
 		}
 	}
 
@@ -197,7 +205,8 @@ public class gongController {
 			@RequestParam("spage") int spage,
 			@RequestParam("subject") String subject,
 			@RequestParam("date") String date, 
-			@RequestParam("content") String content) {
+			@RequestParam("content") String content,
+			@RequestParam("writer") String writer) {
 		
 		String sword = "";
 		if (request.getParameter("sword") == null)
@@ -207,14 +216,15 @@ public class gongController {
 		
 		String word = URLEncoder.encode(sword);
 	
-		gongBean bean = new gongBean();
-		bean.setBdate(date);
-		bean.setNum(num);
-		bean.setCon(content);
-		bean.setTitle(subject);
+		gongDto dto = new gongDto();
+		dto.setBdate(date);
+		dto.setNum(num);
+		dto.setCon(content);
+		dto.setTitle(subject);
+		dto.setWriter(writer);
 		
 		inter.updateNum(num);
-		inter.updateForm(bean);
+		inter.updateForm(dto);
 		
 		try {
 			response.sendRedirect("gong_list?spage=" + spage + "&sword=" + word);

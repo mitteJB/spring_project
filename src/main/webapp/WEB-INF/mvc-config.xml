@@ -27,7 +27,6 @@
             base-package="pack.model" />
     <context:component-scan
             base-package="pack.scheduler" />
-    <context:component-scan base-package="pack.rent.*"/>
     <context:component-scan base-package="pack.aspect"/>
 
 

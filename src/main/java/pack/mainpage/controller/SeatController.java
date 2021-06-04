@@ -36,7 +36,7 @@ public class SeatController {
 	
 	@RequestMapping(value="webCheckIn", method=RequestMethod.GET)
 	public String goWebCheckInPage() {
-		return "webCheckIn";
+		return "wegCheckIn";
 	}
 	
 	@RequestMapping(value="seat", method=RequestMethod.POST)
@@ -48,6 +48,10 @@ public class SeatController {
 			) {
 		//System.out.println(inwon);
 		//System.out.println(a_seat);
+
+		//테이블 만드는 함수를 인서트할때 불러오도록 하였음
+		int res=inter.seat_createTable();
+		System.out.println("건 수: "+res);
 		
 		String air_name=a_seat;
 		ModelAndView view=new ModelAndView("seat");
@@ -58,7 +62,6 @@ public class SeatController {
 			dto.setS_no(sLists.get(i).getS_no());
 			plist.add(dto);
 		}
-		
 		view.addObject("data", plist);
 		view.addObject("t_no", t_no);
 		view.addObject("inwon", inwon);
@@ -146,10 +149,16 @@ public class SeatController {
 	
 	@RequestMapping(value="createTable", method=RequestMethod.GET)
 	public String submitCreate() {
-		int res=inter.seat_createTalble();
+		int res=inter.seat_createTable();
 		System.out.println("건 수: "+res);
-		
 		return "createTable";
 	}
+
+	/*@RequestMapping(value="seat", method=RequestMethod.GET)
+	public String submitCreate() {
+		int res=inter.seat_createTable();
+		System.out.println("건 수: "+res);
+		return "seat";
+	}*/
 	
  }

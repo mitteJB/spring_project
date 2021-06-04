@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
     <link rel="stylesheet" href="resources/css/login.css"> <!-- CSS reset -->
     <script src="resources/js/login.js"></script>
-    <title>Bom Air : Register Ok</title>
+    <title>Judy Air || 회원가입 완료</title>
   </head>
   
   <body>
@@ -31,10 +31,10 @@
 	  
       <div class="celebrateMessage">
       	<!--  <h1 style="padding:50px 0 0 0; font-size:60px; font-family: 'Italianno', cursive;"></h1>-->
-      	<h2 class="basicFont" style="padding-top:50px; font-size:54px; font-weight: bold;">떠나요~ 다같이! 모든 걸 훌훌 버리고~</h2>
-		<h4 class="basicFont" style="font-size:25px; margin-top:15px;">Best Of Most Airline & Rent Car, 봄에어의 회원이 되신 것을 진심으로 환영합니다!</h4>
+      	<h2 class="basicFont" style="padding-top:50px; font-size:54px; font-weight: bold;">안녕하세요!</h2>
+		<h4 class="basicFont" style="font-size:25px; margin-top:15px;">주디에어의 회원이 되신 것을 진심으로 환영합니다!</h4>
 		<br>
-	  	<div class="imgRegisterOk"><img id="imgLogin" src="resources/images/imgLogin.PNG"/></div>
+	  	<div class="imgRegisterOk"><img id="imgLogin" src="resources/images/imgResister.png"/></div>
 		<input type="button" class="btn-primary2 btnGoMain btn btn-lg2" value="메인으로 가기"/>
       </div>		
     </div> <!-- /container -->

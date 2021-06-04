@@ -9,13 +9,13 @@
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top">
 		<a class="navbar-brand" href="goindex"><img
 						class="brand-logo-light"
-						src="resources/images/bomair_logo.png" style="width:20%; padding-top: 5px;"></a>
+						src="resources/images/judyair_logo2.png" style="width:50%; padding-top: 5px;"></a>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-lg-auto">
 				
 				
 				<c:if test="${id ne null }">
-					<li class="nav-item dropdown" style="color:white;">${id }님<br>안녕하세요!</li>				
+					<li class="nav-item dropdown" id="login_id">${id }님 안녕하세요!</li>
 				</c:if>
 				
 				<c:if test="${id eq 'admin' }">
@@ -30,34 +30,13 @@
 
 				<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="dropdown01"
-					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">항공권
+					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >항공권
 						예매</a>
 					<div class="dropdown-menu" aria-labelledby="dropdown01">
 						<a class="dropdown-item" href="booking">항공권 예매</a>
 					</div></li>
 				<li class="nav-item"><a class="nav-link" href="mybook?g_id=${id }">나의
 						예매</a></li>
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" id="dropdown03"
-					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">서비스
-						안내</a>
-					<div class="dropdown-menu" aria-labelledby="dropdown03">
-						<a class="dropdown-item" href="#">운임 안내</a> <a
-							class="dropdown-item" href="#">기내 서비스</a>
-					</div></li>
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" id="dropdown04"
-					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">렌터카/여행자
-						보험</a>
-					<div class="dropdown-menu" aria-labelledby="dropdown04">
-						<a class="dropdown-item" href="gomycarpage?id=${id}">렌트카</a> 
-						<c:if test="${id eq 'admin' }">
-									<a class="dropdown-item" href="admincar">렌트카 모든 예약 확인</a> 
-								</c:if>
-						<a class="dropdown-item"
-							href="#">여행자 보험 </a>
-					</div></li>
-
 				<c:if test="${id ne null }">
 					<li class="nav-item"><a class="nav-link" href="#"
 						onclick='confirmLogout()'>로그아웃</a></li>
@@ -72,3 +51,13 @@
 		</div>
 	</nav>
 </div>
+<ul class="sci" style="opacity: 0.7">
+	<li><a href="https://github.com/mitteJB"><img src="resources/images/j.png" style="width: 25px; height: 25px;"></a>
+	</li>
+	<li><a href="https://github.com/Catching-Java"><img src="resources/images/u.png" style="width: 25px; height: 25px;"></a>
+	</li>
+	<li><a href="https://github.com/pigletmong2"><img src="resources/images/d.png"
+													  style="width: 25px; height: 25px;"></a></li>
+	<li><a href="https://github.com/movie4568"><img src="resources/images/y.png" style="width: 25px; height: 25px;"></a>
+	</li>
+</ul>

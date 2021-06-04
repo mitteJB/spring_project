@@ -1,11 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	
+	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Write something else you want</title>
+
+<title>게시물 수정 페이지</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/
@@ -29,7 +33,7 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('#reset').click(function() {
+		$('#reset1').click(function() {
 			$('#subject').val('');
 			$('#content').val('');
 		});
@@ -43,14 +47,25 @@
 	});
 </script>
 </head>
+
+<%@include file="/bootstrap.jsp"%>
+<link rel="stylesheet" type="text/css" href="resources/css/style.css?after">
 <body>
+	<header>
+		<%@ include file="../../header.jsp"%>
+	</header>
+	<section style="margin-top: 150px" >
 	<div class="container">
 		<table class="table table-bordered">
-			<thead>
-			<caption>글 수정</caption>
-			</thead>
 			<tbody>
 				<form action="gong_update" method="POST" id="frm">
+					<tr>
+						<th colspan="4" style="background-color: #eeeeee; text-align: center;">게시물 수정</th>
+					</tr>
+					<tr>
+						<th>작성자:</th>
+						<td><input type="text" name="writer" class="form-control" id="writer" value="${dto.writer}" readonly="readonly"/></td>
+					</tr>
 					<tr>
 						<th>제목:</th>
 						<td><input type="text" placeholder="제목을 입력하세요. " name="subject" class="form-control" id='subject' value='${dto.title}'/></td>
@@ -62,17 +77,23 @@
 					</tr>
 					<tr>
 						<th>내용:</th>
-						<td colspan="4"><textarea cols="10" placeholder="내용을 입력하세요. " name="content" class="form-control" id="content">${dto.con}</textarea></td>
+						<td colspan="4"><textarea cols="10" rows="20" placeholder="내용을 입력하세요. " name="content" class="form-control" id="content">${dto.con}</textarea></td>
 					</tr>
 					<tr>
-							<td colspan="5"><input type="button" value="수정" class="pull-right" id="confirm"/> 
-							<input type="button" value="초기하" class="pull-left" id="reset" /> 
-							<input type="button" value="글 목록으로... " class="pull-right" onclick="javascript:location.href='gong_list?spage=${spage}&sword=${sword}'"/></td>
+						<td colspan="4">
+						<a id="confirm" href="javascript:void(0);" onclick="function(confirm);">수정하기</a> 
+						<a id="reset1" href="javascript:void(0);" onclick="function(reset1);">초기화</a>
+						<a id="gotolist1" href="gong_list?spage=${spage}&sword=${sword}">목록으로 이동</a>
+						</td>
 					</tr>
-					
 				</form>
 			</tbody>
 		</table>
+		file: <input type="file" name="file">
 	</div>
+	</section>
+	<%@ include file="/bottom.jsp"%>
+	</section>
+	<%@ include file="/bottom.jsp"%>
 </body>
 </html>

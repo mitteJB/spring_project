@@ -1,5 +1,6 @@
 $(document).ready(
 		function() {
+			/*공지사항 가져오기 Ajax 통신*/
 			$.ajax({
 				type : "get",
 				url : "gong_main",

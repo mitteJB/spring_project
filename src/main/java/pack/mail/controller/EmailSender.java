@@ -39,7 +39,7 @@ public class EmailSender extends SqlSessionDaoSupport {
 	public void sendEmail(BookDto dto) throws Exception {
 		// 메일 발송 기능 제공
 		HashMap<String, Object> map = getMailAddress(dto.getG_id());
-		String setfrom = "hwangjeongyong4@gmail.com";
+		String setfrom = "pocake77@gmail.com";
 		String tomail = (String) map.get("g_mail"); // 받는 사람 이메일
 		String title = "BOM AIR 이용을 감사드립니다"; // 제목
 
@@ -72,9 +72,10 @@ public class EmailSender extends SqlSessionDaoSupport {
 	public boolean sendPwd(HashMap<String, Object> paramap) {
 		boolean b = false;
 		HashMap<String, Object> map = getMail_Pwd(paramap);
-		if (map.size() != 0) {
+		System.out.println(map);
+		if (map != null) {
 			b = true;
-			String setfrom = "hwangjeongyong4@gmail.com";
+			String setfrom = "pocake77@gmail.com";
 			String tomail = (String) map.get("g_mail"); // 받는 사람 이메일
 			String title = "BOM AIR 비밀번호 찾기 기능 입니다."; // 제목
 			try {
@@ -86,10 +87,10 @@ public class EmailSender extends SqlSessionDaoSupport {
 				String text = "고객님의 비밀번호는 " + (String) map.get("g_pwd");
 				messageHelper.setText(text, true);
 				mailSender.send(message);
+				System.out.println("비밀번호 보내기 성공");
 			} catch (Exception e) {
 				System.out.println(e);
 			}
-
 		}
 		return b;
 	}

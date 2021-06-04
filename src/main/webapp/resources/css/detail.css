@@ -17,14 +17,14 @@ h4{
 	margin-top:40px;
 }
 .hrCss{
-	border: solid 6px #7cc67c; 
+	border: solid 2px #00B2ED;
 	width: 90%;
 	margin: auto;
 }
 .basicFont{
 	font-family: 'Noto Sans KR', sans-serif;
     color: #484848;
-    font-size: 20px;
+    font-size: 10px;
 }
 .font_SuezOne{
 	font-family: 'Suez One', serif;
@@ -36,11 +36,15 @@ table{
 	width:50%;
 	margin:auto;
 }
+
+table tr {
+    font-size: 15px;
+}
 th{
 	padding: 30px 40px;
 }
 td{
-	padding: 10px 15px;
+	padding: 10px 20px;
 }
 .btn2 {
     display: inline-block;
@@ -57,7 +61,8 @@ td{
     font-size: 16px;
     line-height: 1.5;
     border-radius: 50px;
-    background-color: #7cc67c;
+    /*background-color: #7cc67c;*/
+    background-color: #00B2ED;
     color: white;
 }
 .btn2-lg{

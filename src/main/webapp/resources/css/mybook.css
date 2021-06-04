@@ -2,28 +2,26 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,900');
 @import url('https://fonts.googleapis.com/css?family=Suez+One');
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif:700i');
-h1{
-    font-family: 'Noto Sans KR', sans-serif;
-    color: #484848;
-    font-size: 42px;
-}
 h4{
-    font-family: 'Noto Sans KR', sans-serif;
-    color: #484848;
-    font-size:24px;
+	font-family: 'Noto Sans KR', sans-serif;
+	color: #484848;
+	font-size:24px;
 }
+
 .container{
 	text-align:center;
 	margin-top:40px;
 }
 .hrCss{
-	border: solid 6px #7cc67c; 
+	border: solid 2px #00B2ED;
 	width: 90%;
+	margin: auto;
 }
+
 .basicFont{
 	font-family: 'Noto Sans KR', sans-serif;
-    color: #484848;
-    font-size: 20px;
+	color: #484848;
+	font-size: 10px;
 }
 .font_SuezOne{
 	font-family: 'Suez One', serif;
@@ -35,9 +33,17 @@ table{
 	width:90%;
 	margin:auto;
 }
+
+table tr th{
+	font-size: 15px;
+	border-bottom: solid 1px black;
+	border-collapse: collapse;
+}
+
 th{
 	padding: 20px 40px 20px 40px;
 }
 td{
 	padding: 10px 30px 10px 30px;
 }
+
