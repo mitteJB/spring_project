@@ -539,13 +539,8 @@ ul.timeline > li:before {
     z-index: 400;
 }
 
-.btn-success{
-	background: rgb(45, 50, 70) !important;
-	border-color: rgb(45, 50, 70) !important;
-}
-
 .navbar {
-	background-color:rgba(45, 50, 70,0.9);
+	background-color:rgba(255, 255, 255, 0.7);
 	margin : 0;
 }
 
