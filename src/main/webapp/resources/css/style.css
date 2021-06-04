@@ -634,6 +634,15 @@ ul.timeline > li:before {
     position: relative;
     padding-bottom: 64px;
 }
+
+/*스와이프 css*/
+.swiper_2 {
+    width: 1280px;
+    height: 424px;
+    margin: 50px auto 250px;
+
+}
+
 .proSwiper {
     margin: 50px auto 0;
     margin-top: 50px;
