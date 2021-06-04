@@ -197,7 +197,6 @@
                     <!-- 빠른예약 창(항공권)-->
                     <table class="table" id="reservation-table" style="width: 1280px; ">
                         <tr>
-                                name="reservation" style="width: 100%"></td> -->
                             <td style="width: 50%; text-align: left;">
                                 <input type="radio" name="flightWay" value="round" checked="checked"/>왕복
                                 <input type="radio" name="flightWay" value="one_way"/>편도
@@ -252,7 +251,7 @@
                                    style="align:right; font-size: 1.5rem;  padding: .375rem 1.5rem; margin:10px;  /* margin-right: -10rem; */ width: -webkit-fill-available;"
                                    id="reservationsubmit">항공권 검색
                                 </a></td>
-                            </td> -->
+                            </td>
                         </tr>
                     </table>
                 </div>
