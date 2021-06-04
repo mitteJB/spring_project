@@ -5,11 +5,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="resources/css/mybook.css">
+<title>항공노선 정보 입력</title>
+<link rel="stylesheet" href="resources/css/mybook.css?after">
 </head>
 <body class="basicFont container">
-<div class="logo"><a href="index.jsp"><img src="resources/images/bomair_logo.png"/></a></div>
+<div class="logo"><a href="index.jsp"><img src="resources/images/judyair_logo.png" alt="항공노선입력로고" style="width: 30%"></a></div>
 <br><br><br>
 * 도시 항공노선 정보 입력 * <p/>
 <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js" ></script>

@@ -24,7 +24,6 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin Page</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
                             <a class="dropdown-item" href="insert">데이터베이스</a>
-                            <a class="dropdown-item" href="cal">매출현황 </a>
                         </div>
                     </li>
                 </c:if>
