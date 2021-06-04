@@ -8,89 +8,10 @@
 <head>
     <!-- Bootstrap -->
     <%@include file="/bootstrap.jsp" %>
+
+<%--    css--%>
     <link rel="stylesheet" type="text/css" href="resources/css/style.css?after">
     <title>JUDY AIR || JUn Do Young Airline</title>
-
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <style>
-        .swiper_1 {
-            width: 1170px;
-            margin: 0 auto 20px;
-        }
-
-        .swiper_2 {
-            width: 1280px;
-            height: 424px;
-            margin-top: 50px;
-            margin-right: auto;
-            margin-bottom: 250px;
-            margin-left: auto;
-
-        }
-
-        .swiper_3 {
-            width: 1170px;
-            height: 424px;
-        }
-
-    </style>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        $(function () {
-            var swiper = new Swiper('.swiper_1', {
-                slidesPerView: 3,
-                spaceBetween: 18,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                autoplay: {
-                    delay: 3000,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                }
-            });
-
-            var swiper = new Swiper('.swiper_2', {
-                loop: true,
-                loopFillGroupWithBlank: true,
-                observer: true,
-                observeParents: true,
-
-
-                pagination: {
-                    el: '.swiper-pagination',
-                    type: 'progressbar',
-                },
-                autoplay: {
-                    delay: 3000,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                }
-            });
-
-            var swiper = new Swiper('.swiper_3', {
-                direction: 'vertical',
-                slidesPerView: 1,
-                spaceBetween: 30,
-                mousewheel: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                autoplay: {
-                    delay: 3000,
-                }
-            });
-        });
-    </script>
-
-
 </head>
 <body>
 
