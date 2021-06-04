@@ -21,7 +21,7 @@ h4{
 	margin-top:40px;
 }
 .hrCss{
-	border: solid 6px #7cc67c; 
+	border: solid 6px #00B2ED;
 	width: 90%;
 	margin: auto;
 }
@@ -60,7 +60,7 @@ td{
     font-size: 16px;
     line-height: 1.5;
     border-radius: 50px;
-    background-color: #7cc67c;
+    background-color: #00B2ED;
     color: white;
 }
 .btn2-lg{

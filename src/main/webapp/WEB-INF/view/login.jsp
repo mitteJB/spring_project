@@ -17,7 +17,7 @@
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <%--     <%@include file="/bootstrap_login.jsp" %> --%>
-    <link rel="stylesheet" href="resources/css/login.css">
+    <link rel="stylesheet" href="resources/css/login.css?after">
     <script src="resources/js/login.js"></script>
 
     <title>Bom Air : Login Page</title>

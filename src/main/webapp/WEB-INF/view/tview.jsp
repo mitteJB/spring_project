@@ -20,7 +20,7 @@
 	href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg"
 	color="#111" />
 <link rel="canonical" href="https://codepen.io/victorjanin/pen/oGYvjK" />
-<link rel="stylesheet" href="resources/css/ticketstyle.css" />
+<link rel="stylesheet" href="resources/css/ticketstyle.css?after" />
 
 <script type="text/javascript">
 
@@ -62,7 +62,7 @@ function Email_ticket(t_no){
 <br>
 <br><br>
 <div style="text-align: center;width: 800px;" >
-bomair ticket 미리보기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+judyair ticket 미리보기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input type="button" onclick="pagePrintPreview()" value="프린트하기">
 <input type="button" onclick="Email_ticket('${dto.t_no}')" value="내메일로 받기">
 </div>
@@ -75,7 +75,7 @@ bomair ticket 미리보기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<main> 
 	
 	<header>
-		<h1>Boarding pass BOMAIR</h1>
+		<h1>Boarding pass JUDYAIR</h1>
 		<div>
 			<h5>Flight n°</h5>
 			<p>${dto.air_name }</p>

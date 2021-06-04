@@ -183,7 +183,7 @@ public class EmailSender extends SqlSessionDaoSupport {
 		sb.append("<td style='padding: 30px 30px 30px 30px;'>");
 		sb.append("<table cellpadding='0' cellspacing='0' width='100%'>");
 		sb.append("<tr>");
-		sb.append("<td width='75%'> 세계 최고를 향하는 국민항공<br/>BOMAIR 2019 항공여행 대중화를 창조하겠습니다.");
+		sb.append("<td width='75%'> 세계 최고를 향하는 국민항공<br/>JUDYAIR 2019 항공여행 대중화를 창조하겠습니다.");
 		sb.append("</td>");
 		sb.append("<td>");
 		sb.append("<a href='http://www.twitter.com/'>");

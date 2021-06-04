@@ -11,8 +11,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js" ></script>
-<link rel="stylesheet" href="resources/css/mybook.css">
-<link rel="stylesheet" href="resources/css/login.css">
+<link rel="stylesheet" href="resources/css/mybook.css?after">
+<link rel="stylesheet" href="resources/css/login.css?after">
 <script type="text/javascript">
 function functot() {
 	
@@ -22,7 +22,7 @@ function functot() {
 
 </head>
 <body class="basicFont container">
-<div class="logo"><a href="index.jsp"><img src="resources/images/bomair_logo.png"/></a></div>
+<div class="logo"><a href="index.jsp"><img src="resources/images/judyair2_logo.png"/></a></div>
 <h1> * <%=ab.substring(1,11) %> 매출 * </h1>
 <br>
 <input type="button" value="전체매출" onclick="javascript:functot()" class="btn btn-lg btn-primary2 btn-block" style="width: 100px; height: 50px">

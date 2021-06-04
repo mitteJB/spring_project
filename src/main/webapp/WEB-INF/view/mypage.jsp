@@ -10,7 +10,7 @@
 <script src="https://code.jquery.com/jquery-3.4.0.js"
   integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
 <%@include file="/bootstrap.jsp"%>
-<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+<link rel="stylesheet" type="text/css" href="resources/css/style.css?after">
 <div id="layer"
 	style="display: none; position: fixed; overflow: hidden; z-index: 1; -webkit-overflow-scrolling: touch;">
 	<img src="//t1.daumcdn.net/postcode/resource/images/close.png"
@@ -21,7 +21,7 @@
 <script src="resources/js/register.js"></script>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <!-- 직접 정의한 CSS -->
-<link rel="stylesheet" href="resources/css/mypage.css">
+<link rel="stylesheet" href="resources/css/mypage.css?after">
 </head>
 <script type="text/javascript">
 $(document).ready(function(){

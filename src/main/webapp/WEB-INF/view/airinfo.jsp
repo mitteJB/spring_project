@@ -77,8 +77,8 @@ function numberWithCommas(x) {
 <br>
 <br>
 <div align="center">
-<img class="brand-logo-light" src="resources/images/bomair_logo.png" style="width:510px; height:100px">
-<table  rules="none" style="background-color: #7cc67c">
+<img class="brand-logo-light" src="resources/images/judyair2_logo.png" style="width:510px; height:100px">
+<table  rules="none" style="background-color: #00B2ED">
 	<tr>
 		<td> &nbsp;&nbsp;가는편&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| </td>
 		<td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;인천 (ICN) ▶  

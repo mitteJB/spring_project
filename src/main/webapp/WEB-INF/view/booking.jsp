@@ -5,7 +5,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <html style="height: 100%; width: 100%;">
 <head>
-<link rel="stylesheet" href="resources/css/bookingstyle.css">
+<link rel="stylesheet" href="resources/css/bookingstyle.css?after">
 <!-- Bootstrap -->
 <%@include file="/bootstrap.jsp"%>
 <!-- CSS -->

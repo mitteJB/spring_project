@@ -7,8 +7,8 @@
 <%@include file="/bootstrap_register.jsp"%>
 <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="resources/css/style.css">
-<link rel="stylesheet" href="resources/css/register.css">
+<link rel="stylesheet" type="text/css" href="resources/css/style.css?after">
+<link rel="stylesheet" href="resources/css/register.css?after">
 <title>회원가입</title>
 <!-- 우편번호 div -->
 <div id="layer"

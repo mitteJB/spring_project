@@ -21,11 +21,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <!-- 합쳐지고 최소화된 최신 CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<!-- 부가적인 테마 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">-->
-<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
 <!-- 직접 정의한 CSS -->
-<link rel="stylesheet" href="resources/css/seat.css"> 
+<link rel="stylesheet" href="resources/css/seat.css?after">
 <script>
 var confirmValue=false;
 var inwon=${inwon};
@@ -160,7 +157,7 @@ function confirmCheck(){
 
 <div class="container basicFont">
 	<div class="SeatTop">
-		<a href="index.jsp"><img src="resources/images/bomair_logo.png"/></a>
+		<a href="index.jsp"><img src="resources/images/judyair_logo.png" width="30%"/></a>
 		<p class="font_title">좌석 지정 페이지</p>
 		<hr class="hrCss">
 	</div>
@@ -258,13 +255,9 @@ function confirmCheck(){
 		<input type="hidden" name="seatTableName" value="${a_seat }">
 		<div class="hiddenArea"></div>
 		<div class="css_btnSubmit">
-			<input type="button" value="체크인 완료하기" class="btn btn-big btn-success" onclick="confirmCheck();">
+			<input type="button" value="체크인 완료하기" class="btn btn-big btn-success" onclick="confirmCheck();" style="background-color: #00B2ED">
 		</div>
 	</form>
-
-	<br><br>	
-	<a href="showCheckinInfo">Go to 체크인 내역 확인 페이지 (확인용, 철거예정)</a>
-	
 </div>	
 </body>
 </html>

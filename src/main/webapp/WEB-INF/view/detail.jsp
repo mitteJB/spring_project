@@ -7,7 +7,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>bomair 예매내역 상세보기</title>
+    <title>judyair 예매내역 상세보기</title>
     <link rel="stylesheet" type="text/css" href="resources/css/style.css?after">
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js"></script>
     <link rel="stylesheet" href="resources/css/detail.css?after">

@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Insert title here</title>
-    <link rel="stylesheet" href="resources/css/mybook.css">
+    <link rel="stylesheet" href="resources/css/mybook.css?after">
 </head>
 <body class="basicFont container">
 <div class="logo"><a href="index.jsp"><img src="resources/images/judyair_logo.png" style="width: 30%"></a></div>
@@ -15,7 +15,7 @@
 
 ** 노선정보 목록 ** <br>
 <a href="insert">노선 추가</a><br>
-<table border="1">
+<table>
     <tr>
         <th>노선코드</th>
         <th>항공편명</th>

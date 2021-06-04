@@ -18,7 +18,7 @@
 
 </head>
 <%@include file="/bootstrap.jsp"%>
-<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+<link rel="stylesheet" type="text/css" href="resources/css/style.css?after">
 <body>
 	<header>
 		<%@ include file="../../header.jsp"%>

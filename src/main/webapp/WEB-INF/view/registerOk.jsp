@@ -15,7 +15,7 @@
     <%@include file="/bootstrap_registerOk.jsp"%>
     <%@include file="/bootstrap.jsp"%>
     <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
-    <link rel="stylesheet" href="resources/css/login.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="resources/css/login.css?after"> <!-- CSS reset -->
     <script src="resources/js/login.js"></script>
     <title>Judy Air || 회원가입 완료</title>
   </head>

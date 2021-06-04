@@ -14,7 +14,7 @@
 <script src='resources/js/jquery.min.js'></script>
 <script src='resources/js/fullcalendar.min1.js'></script>
 <script src='resources/js/ko.js'></script>
-<div style="text-align: center"><a href="index.jsp"><img src="resources/images/bomair_logo.png"/></a></div>
+<div style="text-align: center"><a href="index.jsp"><img src="resources/images/judyair2_logo.png"/></a></div>
 <br><br><br>
 <script> 
 
