@@ -64,6 +64,11 @@ body {
     border-radius: 0;
 }
 
+.brand-logo-light{
+	height:90%;
+	padding-top:5px;
+}
+
 .banner-text {
     position: absolute;
     margin-top: 630px;
@@ -159,7 +164,7 @@ body {
 .imsi-container {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 50%;
     margin: 0;
     padding: 0;
     left: 0;
@@ -438,15 +443,15 @@ Width of container : 500 + 50*4 = 700px;
 Default 700/5 : 140px;
 */
 
-.accordian {
-    width: 1000px;
-    height: 333px;
-    overflow: hidden;
-
-    margin: 50px auto;
-    -webkit-box-shadow: 0 8px 6px -6px black;
-    -moz-box-shadow: 0 8px 6px -6px black;
-    box-shadow: 0px 8px 6px -6px black;
+.accordian{
+  width: 1000px;
+  height: 333px;
+  overflow:hidden;
+  
+  margin: 200px auto;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0px 8px 6px -6px black;
 }
 .accordian ul{
   
@@ -468,7 +473,7 @@ Default 700/5 : 140px;
 
 
 .accordian ul:hover li{
-  width: 70px;
+  width: 100px;
 }
 
 .accordian ul li:hover{
@@ -505,30 +510,39 @@ Default 700/5 : 140px;
 
 /* 공지사항 표시 */
 #gonggi2 {
-	width: 100%;
+    width: 100%;
     height: 40%;
     margin-top: 50px;
     margin-left: 80px;
+}
+
+#gongtitle{
+	text-align:left;
 }
 
 #googgi_content{
 	text-align:left;
 }
 
-.float-left {
-    float: left!important;
-    margin-left:10px;
+.float-left{
+	margin-left:10px;
+}
+.float-left-align{
+	text-align:left;
 }
 
 .float-left-list{
+	text-align:left;
 	margin-left:10px;
 }
+/* 공지사항 css 끝 */
 
 ul.timeline {
     list-style-type: none;
     position: relative;
 }
 
+/* 공지사항 리스트 라인 */
 ul.timeline:before {
     content: ' ';
     background: #d4d9df;
@@ -538,13 +552,17 @@ ul.timeline:before {
     width: 2px;
     height: 100%;
     z-index: 400;
+    margin-left:10px;
 }
 
+/* 공지사항 제목 내용 여백 */
 ul.timeline > li {
-    margin: 20px 0;
+    margin: 20px 0 25px 0;
     padding-left: 20px;
 }
 
+
+/* 공지사항 리스트 기호 */
 ul.timeline > li:before {
     content: ' ';
     background: white;
