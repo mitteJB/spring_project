@@ -23,11 +23,16 @@
 	<header>
 		<%@ include file="../../header.jsp"%>
 	</header>
-	<section>
+	<section style="margin-top: 200px;">
+		<div>
+			<a id="community">커뮤니티</a>
+			<c:if test="${id ne null}">
+			<a id="newbo" class='nav-link' href='gong_write'>>새글 추가</a>
+			</c:if>
+		</div>
 		<!-- 게시글 목록 -->
-		<table border="1" class="table" style="margin-top: 200px">
-			<caption style="caption-side:top;">커뮤니티</caption>
-			<tr style="background-color: silver; color: black;">
+		<table id="boardtable" border="1" class="table">
+			<tr class="brlist">
 				<th>번호</th>
 				<th>제목</th>
 				<th>조회수</th>
@@ -36,10 +41,8 @@
 				<c:if test="${id eq 'admin' }">
 					<th colspan="2">관리자 권한</th>
 				</c:if>
-				<%-- <c:if test="${id ne null && id eq id &&id ne 'admin'}">
-				<th colspan="2">게시물 관리</th>
-				</c:if> --%>
 			</tr>
+			
 			<c:forEach var="s" items="${list}">
 				<tr>
 					<td>${s.num }</td>
@@ -59,11 +62,6 @@
 							href="gong_update?num=${s.num}&spage=<%=request.getParameter("spage")%>&sword=${sword}">수정</a></td>
 						<td><a href="#" onclick="delchk(${s.num },'${sword}')">삭제</a></td>
 					</c:if>
-<%-- 					<c:if test="${id ne null && id eq s.writer && id ne 'admin'}">
-						<td><a
-							href="gong_update?num=${s.num}&spage=<%=request.getParameter("spage")%>&sword=${sword}">수정</a></td>
-						<td><a href="#" onclick="delchk(${s.num },'${sword}')">삭제</a></td>
-					</c:if> --%>
 				</tr>
 			</c:forEach>
 		</table>
@@ -130,14 +128,6 @@
 			<form action="gong_list?spage=1" name="frm" method="post">
 				<input type="text" name="sword"> <input type="submit"
 					class="btn btn-outline-dark" value="검색" id="btnSearch">
-				<%-- <c:if test="${id eq 'admin' }">
-					<a class='nav-link' href='gong_write'>새글 추가</a>
-				</c:if> --%>
-				
-					<c:if test="${id ne null}">
-					<a class='nav-link' href='gong_write'>새글 추가</a>
-					</c:if>
-				
 			</form>
 		</div>
 	</section>

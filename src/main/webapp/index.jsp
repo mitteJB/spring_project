@@ -61,55 +61,56 @@
 
 <%--공지사항--%>
 <div id="gonggi2">
-    <div class="row" style="width: 1000px">
+    <div class="row" style="float: left;width: 35%;">
         <div class="col-md-6">
-            <h2>
-                <a href="gong_list?spage=1">공지사항</a>
+            <h2 id="gongtitle">
+                <a href="gong_list?spage=1">커뮤니티</a>
             </h2>
             <ul class="timeline" id="gonggi_content">
 
             </ul>
         </div>
     </div>
-</div>
-
-<%--공지사항 옆 움직이는 이미지--%>
-<div id="accorDiv">
-	<div class="accordian">
-		<ul>
-			<li>
-				<div class="image_title"></div>
-				<a href="#"> <img
-						src="resources/images/polynesia.jpg">
-				</a>
-			</li>
-			<li>
-				<div class="image_title"></div>
-				<a href="#"> <img
-						src="resources/images/house.jpg">
-				</a>
-			</li>
-			<li>
-				<div class="image_title"></div>
-				<a href="#"> <img
-						src="resources/images/joshua-earle.jpg">
-				</a>
-			</li>
-			<li>
-				<div class="image_title"></div>
-				<a href="#"> <img
-						src="resources/images/dino-reichmuth.jpg">
-				</a>
-			</li>
-			<li>
-				<div class="image_title"></div>
-				<a href="#"> <img
-						src="resources/images/beach-6292382_640.jpg">
-				</a>
-			</li>
-		</ul>
+    <%--공지사항 옆 움직이는 이미지--%>
+	<div id="accorDiv">
+		<div class="accordian">
+			<ul>
+				<li>
+					<div class="image_title"></div>
+					<a href="#"> <img
+							src="resources/images/polynesia.jpg">
+					</a>
+				</li>
+				<li>
+					<div class="image_title"></div>
+					<a href="#"> <img
+							src="resources/images/house.jpg">
+					</a>
+				</li>
+				<li>
+					<div class="image_title"></div>
+					<a href="#"> <img
+							src="resources/images/joshua-earle.jpg">
+					</a>
+				</li>
+				<li>
+					<div class="image_title"></div>
+					<a href="#"> <img
+							src="resources/images/dino-reichmuth.jpg">
+					</a>
+				</li>
+				<li>
+					<div class="image_title"></div>
+					<a href="#"> <img
+							src="resources/images/beach-6292382_640.jpg">
+					</a>
+				</li>
+			</ul>
+		</div>
 	</div>
 </div>
+
+
 
 <!-- 빠른예약 창 -->
 <div class="imsi-container">

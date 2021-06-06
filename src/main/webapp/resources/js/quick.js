@@ -1,24 +1,23 @@
 $(document).ready(
-    function () {
-        /*공지사항 가져오기 Ajax 통신*/
-        $.ajax({
-            type: "get",
-            url: "gong_main",
-            dataType: "json",
-            success: function (data) {
-                var str = "";
-                for (var i = 0; i < data.length; i++) {
-                    str += "<li><a href='gong_detail?num=" + data[i].num + "&spage=1' class='float-left'>"
-                        + data[i].title + "</a><br><p>" + data[i].con
-                        + "</p></li>"
-                }
-                $("#gonggi_content").html(str);
+		function() {
+			/*공지사항 가져오기 Ajax 통신*/
+			$.ajax({
+				type : "get",
+				url : "gong_main",
+				dataType : "json",
+				success : function(data) {
+					var str="";
+					for(var i=0;i<data.length;i++){
+						str+="<li class='float-left-align'><a href='gong_detail?num="+data[i].num+"&spage=1' class='float-left'>"
+							+ data[i].title + "</a><br><p class='float-left-list'>" + data[i].con
+							+ "</p></li>"
+					}
+					$("#gonggi_content").html(str);
             },
             error: function () {
                 alert("에러발생");
             }
         });
-
 
         /* 항공권, 렌트카에 따라 테이블 보이기 */
         $("input[name='reservation']").click(function () {
