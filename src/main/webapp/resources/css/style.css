@@ -587,9 +587,9 @@ ul.timeline > li:before {
     padding-left: 3px;
 }
 
-.row {
-    text-align: center;
-}
+/*.row {*/
+/*    text-align: center;*/
+/*}*/
 
 /*로그인시 헤더에 뜨는 텍스트*/
 #login_id {
