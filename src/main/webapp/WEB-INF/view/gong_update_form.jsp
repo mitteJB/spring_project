@@ -93,7 +93,5 @@
 	</div>
 	</section>
 	<%@ include file="/bottom.jsp"%>
-	</section>
-	<%@ include file="/bottom.jsp"%>
 </body>
 </html>
