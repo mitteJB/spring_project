@@ -53,12 +53,14 @@ public class EmailSender extends SqlSessionDaoSupport {
 			String text = Sum_Content(dto);
 			messageHelper.setText(text, true);
 			FileSystemResource file = new FileSystemResource(
-					new File("C:/Users/KITCOOP/Desktop/BomAir_ver_01-1/src/main/webapp/resources/images/logo.png"));
+//					new File("C:/Users/KITCOOP/Desktop/BomAir_ver_01-1/src/main/webapp/resources/images/logo.png"));
+					new File("C:\\Users\\ldi71\\Projects\\JudyAir_Project\\src\\main\\webapp\\resources\\images\\logo.png"));
 
 			FileSystemResource file2 = new FileSystemResource(
-					new File("C:/Users/KITCOOP/Desktop/BomAir_ver_01-1/src/main/webapp/resources/images/facebook.png"));
+					new File("C:\\Users\\ldi71\\Projects\\JudyAir_Project\\src\\main\\webapp\\resources\\images\\facebook.png"));
 			FileSystemResource file3 = new FileSystemResource(
-					new File("C:/Users/KITCOOP/Desktop/BomAir_ver_01-1/src/main/webapp/resources/images/twitter.png"));
+//					new File("C:/Users/KITCOOP/Desktop/BomAir_ver_01-1/src/main/webapp/resources/images/twitter.png"));
+					new File("C:\\Users\\ldi71\\Projects\\JudyAir_Project\\src\\main\\webapp\\resources\\images\\twitter.png"));
 
 			messageHelper.addInline("logo.png", file);
 			messageHelper.addInline("facebook.png", file2);
@@ -114,7 +116,7 @@ public class EmailSender extends SqlSessionDaoSupport {
 		sb.append("<td bgcolor='#ffffff' style='padding: 40px 30px 40px 30px;'>");
 		sb.append("<table cellpadding='0' cellspacing='0' width='100%'>");
 		sb.append("<tr style='text-align: center;'>");
-		sb.append("<td>BOM AIR 이용 감사합니다!</td>");
+		sb.append("<td>JUDY AIR 예매내역입니다!</td>");
 		sb.append("</tr>");
 		sb.append("<tr>");
 
@@ -183,7 +185,7 @@ public class EmailSender extends SqlSessionDaoSupport {
 		sb.append("<td style='padding: 30px 30px 30px 30px;'>");
 		sb.append("<table cellpadding='0' cellspacing='0' width='100%'>");
 		sb.append("<tr>");
-		sb.append("<td width='75%'> 세계 최고를 향하는 국민항공<br/>JUDYAIR 2019 항공여행 대중화를 창조하겠습니다.");
+		sb.append("<td width='75%'>준도영 프로젝트<br/>JUDYAIR 2021 댑악나세요!");
 		sb.append("</td>");
 		sb.append("<td>");
 		sb.append("<a href='http://www.twitter.com/'>");

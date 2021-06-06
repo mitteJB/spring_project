@@ -295,7 +295,6 @@ body {
 
 }
 
-
 .panel-heading-landing {
     background: #f7f7f7 !important;
     padding: 20px !important;
@@ -502,6 +501,7 @@ Default 700/5 : 140px;
     display:none;
 }
 
+/*메인 공지사항 css*/
 #gonggi2 {
 	width: 400px;
 	float: left;
@@ -541,6 +541,8 @@ ul.timeline > li:before {
     height: 20px;
     z-index: 400;
 }
+
+/**/
 
 .navbar {
 	background-color:rgba(255, 255, 255, 0.7);
