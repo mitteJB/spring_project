@@ -1,6 +1,6 @@
-CREATE DATABASE bomair;
+CREATE DATABASE judyair;
 
-USE bomair;
+USE judyair;
 
 CREATE TABLE guest_r
 (
