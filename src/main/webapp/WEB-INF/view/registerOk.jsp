@@ -27,8 +27,7 @@
 	</header>
 
     <div class="container">
-	  <!-- <div class="logo"><a href="index.jsp"><img src="resources/images/bomair_logo.png"/></a></div> -->
-	  
+
       <div class="celebrateMessage">
       	<!--  <h1 style="padding:50px 0 0 0; font-size:60px; font-family: 'Italianno', cursive;"></h1>-->
       	<h2 class="basicFont" style="padding-top:50px; font-size:54px; font-weight: bold;">안녕하세요!</h2>

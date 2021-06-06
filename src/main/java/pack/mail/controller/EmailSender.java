@@ -41,7 +41,7 @@ public class EmailSender extends SqlSessionDaoSupport {
 		HashMap<String, Object> map = getMailAddress(dto.getG_id());
 		String setfrom = "pocake77@gmail.com";
 		String tomail = (String) map.get("g_mail"); // 받는 사람 이메일
-		String title = "BOM AIR 이용을 감사드립니다"; // 제목
+		String title = "JUSY AIR 이용을 감사드립니다"; // 제목
 
 		try {
 			MimeMessage message = mailSender.createMimeMessage();
@@ -53,13 +53,11 @@ public class EmailSender extends SqlSessionDaoSupport {
 			String text = Sum_Content(dto);
 			messageHelper.setText(text, true);
 			FileSystemResource file = new FileSystemResource(
-//					new File("C:/Users/KITCOOP/Desktop/BomAir_ver_01-1/src/main/webapp/resources/images/logo.png"));
 					new File("C:\\Users\\ldi71\\Projects\\JudyAir_Project\\src\\main\\webapp\\resources\\images\\logo.png"));
 
 			FileSystemResource file2 = new FileSystemResource(
 					new File("C:\\Users\\ldi71\\Projects\\JudyAir_Project\\src\\main\\webapp\\resources\\images\\facebook.png"));
 			FileSystemResource file3 = new FileSystemResource(
-//					new File("C:/Users/KITCOOP/Desktop/BomAir_ver_01-1/src/main/webapp/resources/images/twitter.png"));
 					new File("C:\\Users\\ldi71\\Projects\\JudyAir_Project\\src\\main\\webapp\\resources\\images\\twitter.png"));
 
 			messageHelper.addInline("logo.png", file);
@@ -79,7 +77,7 @@ public class EmailSender extends SqlSessionDaoSupport {
 			b = true;
 			String setfrom = "pocake77@gmail.com";
 			String tomail = (String) map.get("g_mail"); // 받는 사람 이메일
-			String title = "BOM AIR 비밀번호 찾기 기능 입니다."; // 제목
+			String title = "JUDY AIR 비밀번호 찾기 기능 입니다."; // 제목
 			try {
 				MimeMessage message = mailSender.createMimeMessage();
 				MimeMessageHelper messageHelper = new MimeMessageHelper(message, true, "UTF-8");

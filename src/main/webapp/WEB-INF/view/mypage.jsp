@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bom Air : My Page</title>
+<title>Judy Air : My Page</title>
 <%@include file="/bootstrap_register.jsp"%>
 <!-- jQuery CDN -->
 <script src="https://code.jquery.com/jquery-3.4.0.js"

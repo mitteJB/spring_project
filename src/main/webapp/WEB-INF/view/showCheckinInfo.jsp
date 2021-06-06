@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bom Air : Show Checkin Info</title>
+    <title>Judy Air : Show Checkin Info</title>
     <!-- 직접 정의한 CSS -->
     <link rel="stylesheet" href="resources/css/showCheckinInfo.css?after">
 </head>
