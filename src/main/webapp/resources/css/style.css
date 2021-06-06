@@ -443,15 +443,18 @@ Width of container : 500 + 50*4 = 700px;
 Default 700/5 : 140px;
 */
 
-.accordian{
-  width: 1000px;
-  height: 333px;
-  overflow:hidden;
-  
-  margin: 200px auto;
-  -webkit-box-shadow: 0 8px 6px -6px black;
-  -moz-box-shadow: 0 8px 6px -6px black;
-  box-shadow: 0px 8px 6px -6px black;
+#accorDiv{
+	overflow:hidden;
+}
+.accordian {
+    width: 100%;
+    height: 333px;
+    overflow: hidden;
+
+    margin: 50px auto;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0px 8px 6px -6px black;
 }
 .accordian ul{
   
@@ -473,7 +476,7 @@ Default 700/5 : 140px;
 
 
 .accordian ul:hover li{
-  width: 100px;
+  width: 70px;
 }
 
 .accordian ul li:hover{
